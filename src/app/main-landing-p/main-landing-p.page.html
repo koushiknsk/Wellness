@@ -1,0 +1,167 @@
+<ion-content>
+
+  <!-- ProgressiveBar grid starts here -->
+  <ion-grid class="pgbar-grid" style="height:10%">
+
+    <!-- Row : runner icons -->
+    <ion-row class="icon" style="height:50%">
+
+      <ion-col>
+        <div id="bronze">
+          <ion-icon *ngIf="isBVisible" slot="start" name="ios-walk"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div id="silver">
+          <ion-icon *ngIf="isSVisible" slot="start" name="ios-walk"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div id="gold">
+          <ion-icon *ngIf="isGVisible" slot="start" name="ios-walk"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div id="platinum">
+          <ion-icon *ngIf="isPVisible" slot="start" name="ios-walk"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- Row : progressiveBar -->
+    <ion-row class="progressbar" style="height:50%">
+      <ion-col>
+        <div id="bronze">bronze</div>
+      </ion-col>
+      <ion-col>
+        <div id="silver">silver</div>
+      </ion-col>
+      <ion-col>
+        <div id="gold">gold</div>
+      </ion-col>
+      <ion-col>
+        <div id="platinum">platinum</div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <br/>
+
+  <!-- Points grid starts here-->
+  <ion-card *ngIf="isMainContentCardVisible" >
+  <ion-grid>
+
+    <!-- Row : pts-ernd-thisYear-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <ion-item lines="none">
+          <ion-label>Points earned this year</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col class="ion-align-self-end">
+        <ion-item lines="none">
+          <ion-input [value]=pointsEarned readonly></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Row : pts-req-nextYear -->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <ion-item lines="none">
+          <ion-label>Points required for next year</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col class="ion-align-self-end">
+        <ion-item lines="none">
+          <ion-input [value]=pointsRequired readonly></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+  <br />
+  <ion-item lines="none">
+    <ion-icon slot="start" name="logo-buffer"></ion-icon>
+    <ion-label stacked (click)="setEarnedPointsCardVisbility($event)">Earn More points</ion-label>
+    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="menu"></ion-icon>
+    <ion-label>Points Statement</ion-label>
+    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="heart"></ion-icon>
+    <ion-label>Health Assessments</ion-label>
+    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="phone-portrait"></ion-icon>
+    <ion-label>Fitness Devices</ion-label>
+    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+</ion-card>
+<ion-card *ngIf="isEarnMorePointsCardVisible">
+    
+      <div>
+        <p> 
+            Below are all the ways you can earn points. Points to stay healthy and active. The more you earn, the higher your status and greater the rewards.
+          </p>
+          </div>
+       <div>
+        <ion-item lines="none">
+            <ion-icon slot="start" name="alarm"></ion-icon>
+            <ion-label stacked (click)="setSleepPageCardVisibility($event)" >Sleep Tracking</ion-label>
+            <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+       </ion-item> 
+       <ion-item lines="none">
+          <ion-icon slot="start" name="pizza"></ion-icon>
+          <ion-label stacked (click)="setNutritionPageCardVisibility($event)">Nutrition Assesment</ion-label>
+          <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+     </ion-item>  
+    </div> 
+      
+  </ion-card>
+
+ 
+  <ion-card *ngIf="isNutritionAssesmentCardVisible">
+    
+      <div>
+        <p> 
+          The Nutrition Assesment helps you assess your eating habits and gives you suggestions on how you can improve on your diet and lifestyle. This assessment can be completed on this application with the help of below button.      
+        </p>       
+         </div>
+       <div>
+          <ion-row>
+              <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center" >Complete Your Assesment Here</ion-button>
+        </ion-col>
+      </ion-row>
+    </div> 
+      
+  </ion-card>
+  <ion-card *ngIf="isSleepTrackingCardVisible">
+    
+      <div>
+        <p> 
+          We all know a good night's sleep is important to your sustained physical and mental wellbeing - so Werve is rewarding you with 10 points every time you get a good night's sleep of seven hours or longer. Track your sleep with a compatible app or device from either Garmin, Fitbit, Moves or Polar.
+         </p>       
+         </div>
+       <div>
+          <ion-row>
+              <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center" >Link Your Device Here</ion-button>
+        </ion-col>
+      </ion-row>
+    </div> 
+      
+  </ion-card>
+
+</ion-content>

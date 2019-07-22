@@ -1,0 +1,71 @@
+<ion-content>
+        <ion-grid class="pgbar-grid" style="height:10%">
+
+                <!-- Row : icons -->
+                <ion-row class="icon" style="height:50%">
+            
+                  <ion-col>
+                    <div id="bronze">
+                      <ion-icon *ngIf="isBVisible" slot="start" name="ios-walk"></ion-icon>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="silver">
+                      <ion-icon *ngIf="isSVisible" slot="start" name="ios-walk"></ion-icon>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="gold">
+                      <ion-icon *ngIf="isGVisible" slot="start" name="ios-walk"></ion-icon>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="platinum">
+                      <ion-icon *ngIf="isPVisible" slot="start" name="ios-walk"></ion-icon>
+                    </div>
+                  </ion-col>
+                </ion-row>
+            
+                <!-- Row : progressiveBar -->
+                <ion-row class="progressbar" style="height:50%">
+                  <ion-col>
+                    <div id="bronze">bronze</div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="silver">silver</div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="gold">gold</div>
+                  </ion-col>
+                  <ion-col>
+                    <div id="platinum">platinum</div>
+                  </ion-col>
+                </ion-row>
+            
+              </ion-grid>
+            
+              <!-- Points grid starts here-->
+              <ion-card >
+                    <ion-card >
+    
+                            <div>
+                              <p> 
+                                  Recommended goals are available only when you have completed your health check. Your data will be kept confidential and help us to improve your health  </p>
+                                </div>
+                             <div>
+                              <ion-item lines="none">
+                                  <ion-icon slot="start" name="bed"></ion-icon>
+                                  <ion-label >Improve your Sleep</ion-label>
+                                  <ion-toggle  slot="end"></ion-toggle>
+                             </ion-item> 
+                             <ion-item lines="none">
+                                    <ion-icon slot="start" name="heart-half"></ion-icon>
+                                    <ion-label >Increase your fiber intake</ion-label>
+                                    <ion-toggle  slot="end" ></ion-toggle>
+                               </ion-item>   
+                          </div> 
+                            
+                        </ion-card>
+                  </ion-card>
+              
+</ion-content>

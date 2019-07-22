@@ -5,7 +5,14 @@ const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
   { path: 'landing-page', loadChildren: './landing-page/landing-page.module#LandingPagePageModule' },
   { path: 'splash', loadChildren: './splash/splash.module#SplashPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'enrollmentp1', loadChildren: './enrollmentp1/enrollmentp1.module#Enrollmentp1PageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'enrollmentp1', loadChildren: './enrollmentp1/enrollmentp1.module#Enrollmentp1PageModule' },
+  { path: 'enrollmentp2', loadChildren: './enrollmentp2/enrollmentp2.module#Enrollmentp2PageModule' },
+  { path: 'enrollmentp3', loadChildren: './enrollmentp3/enrollmentp3.module#Enrollmentp3PageModule' },
+  { path: 'enrollmentp4', loadChildren: './enrollmentp4/enrollmentp4.module#Enrollmentp4PageModule' },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'main-landing-page', loadChildren: './main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
+  { path: 'goals-tab', loadChildren: './goals-tab/goals-tab.module#GoalsTabPageModule' },
 
 ];
 
