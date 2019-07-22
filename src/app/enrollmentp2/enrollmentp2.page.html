@@ -1,0 +1,78 @@
+<ion-content class="background">
+
+  <ion-toolbar style="opacity:0.5;">
+    <ion-title>
+      SET-UP YOUR HEALTH PROFILE
+    </ion-title>
+  </ion-toolbar>
+
+
+  <ion-grid style="height: 100%">
+
+    <!--Exercise Grid Starts Here-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <p>How many days in a week do you exercise ?</p>
+        <ion-select value="3" interface="popover">
+          <ion-select-option value="3">3 days</ion-select-option>
+          <ion-select-option value="4">4 days</ion-select-option>
+          <ion-select-option value="5">5 days</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <!--BloodPressure Grid Starts Here-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <p>Please tell us your blood pressure</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <ion-item>
+          <ion-label>Systolic</ion-label>
+          <ion-input placeholder="mgHG"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col class="ion-align-self-end">
+        <ion-item>
+          <ion-label>Diastolic</ion-label>
+          <ion-input placeholder="mmHG"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!--Glucose Grid Starts Here-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <p>Please tell us your glucose readings (mmol/L).</p>
+        <ion-select value="22" interface="popover">
+          <ion-select-option value="22">22</ion-select-option>
+          <ion-select-option value="24">24</ion-select-option>
+          <ion-select-option value="26">26</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <!--Cholesterol Grid Starts Here-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <p>Please tell us your Cholesterol readings (mmol/L).</p>
+        <ion-select value="22" interface="popover">
+          <ion-select-option value="22">22</ion-select-option>
+          <ion-select-option value="24">24</ion-select-option>
+          <ion-select-option value="26">26</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <!-- Next Button-->
+    <ion-row>
+      <ion-col class="ion-align-self-end">
+        <ion-button expand="block" class="ion-align-self-center">NEXT</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
