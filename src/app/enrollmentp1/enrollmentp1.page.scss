@@ -2,8 +2,42 @@ ion-content.background{
     height: 100%;
     --background: linear-gradient(-45deg, rgb(59,103,158) 0%, rgb(43,136,217) 50%, rgb(32,124,202) 51%, rgb(125,185,232) 100%) !important;
 }
-ion-row{
+ion-grid.E1Grid ion-row{
+    color: white;
+    font-size: 90%;
+    padding: 6%;
+}
+ion-grid.E2Grid ion-row{
+    padding: 2%;
+    color: white;
+    font-size: 90%;
+}
+ion-grid.E2Grid ion-item{
+    size: 80%;
+}
+ion-grid.E3Grid ion-row{
+    color: white;
+    font-size: 90%;
+    padding: 6%;
+}
+ion-grid.E4Grid ion-row{
     color: white;
     font-size: 100%;
-    padding: 6%;
+    padding: 3%;
+}
+ion-grid.E4Grid ion-select-option{
+    color: black;
+    text-decoration-color: black;
+}
+ion-grid.E4Grid ion-select{
+    width: 20%;
+    background-color: #fff;
+    
+}
+ion-grid.E4Grid ion-label{
+    text-decoration-color: white;
+}
+ion-grid.E4Grid p{
+    height: 100%;
+    text-align:center;
 }

@@ -1,15 +1,13 @@
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts" style="height: 100% ;">
-    <ion-slide style="height: 80% ;display: block;">
-      <h1>Stay Fit</h1>
-      <img style="width: 80%" src="assets/images/Exercise.png">  
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
-    </ion-slide>
-  </ion-slides>
-  <ion-button expand="block" [routerLink]="['/splash']" routerLinkActive="router-link-active"  style="position: absolute; width:288px; margin-left: -144px; left: 50%; bottom: 10%">Continue</ion-button>  
+      <ion-row style="text-align: center">
+        <ion-col><h2>Stay Fit</h2></ion-col>
+        </ion-row>
+      <ion-content text-center width="300"height="200"padding=height>
+          <img style="position: relative" src="assets/images/Exercise.png"  />
+          <h6 style="text-align: center" padding=ion-content>Werve Encourages you to stay fit</h6>
+      </ion-content>
+      
+  <ion-button expand="block" [routerLink]="['/login']" routerLinkActive="router-link-active"  style="position: absolute; width:288px; margin-left: -144px; left: 50%; bottom: 10%">Continue</ion-button>
 </ion-content>
+
+
