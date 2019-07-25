@@ -5,5 +5,21 @@ ion-content.background{
 ion-row{
     color: white;
     font-size: 100%;
-    padding: 6%;
+    padding: 3%;
+}
+p {
+    height: 100%;
+    text-align:center;
+}
+ion-label{
+    text-decoration-color: white;
+}
+ion-select{
+    width: 20%;
+    background-color: #fff;
+    
+}
+ion-select-option{
+    color: black;
+    text-decoration-color: black;
 }
