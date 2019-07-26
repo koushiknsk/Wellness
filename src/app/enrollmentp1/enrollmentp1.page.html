@@ -6,7 +6,7 @@
     </ion-title>
   </ion-toolbar>
 
-  <ion-slides pager="true" [options]="slideOpts" style="height: 80%" > 
+  <ion-slides  style="height: 80%" > 
   <ion-slide>
     <!--Enrollment 1 Grid-->
   <ion-grid style="height: 100%" class="E1Grid">
@@ -155,6 +155,7 @@
 <!--Enrollment 4 Grid-->
 <ion-slide>
     <ion-grid style="height: 100%" class="E4Grid">
+  <h6 class="ion-align-self-end">Describe your eating habits</h6>      
 <!--Grains Grid Starts Here-->
         <ion-row>
             <ion-col class="ion-align-self-end">
@@ -224,13 +225,10 @@
           </ion-item>
           </ion-col>
         </ion-row>
-        <!--Next button-->
-        <ion-row class="nextButton">
-            <ion-col class="ion-align-self-end">
-              <ion-button expand="block" [routerLink]="['/home']"  routerLinkActive="router-link-active" class="ion-align-self-center" >NEXT</ion-button>
-            </ion-col>
-          </ion-row>
-      </ion-grid>    
+        
+      </ion-grid> 
+      <!--Next button-->
+        <ion-button expand="block" [routerLink]="['/home']"  routerLinkActive="router-link-active" class="nextButton" style="position: absolute; width:288px; margin-left: -144px; left: 50%; bottom: 10%" >NEXT</ion-button>   
 </ion-slide>
 </ion-slides>
 
