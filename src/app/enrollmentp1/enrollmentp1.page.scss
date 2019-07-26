@@ -26,8 +26,8 @@ ion-grid.E4Grid ion-row{
     padding: 3%;
 }
 ion-grid.E4Grid ion-select-option{
-    color: black;
-    text-decoration-color: black;
+    color: white;
+    text-decoration-color: white;
 }
 ion-grid.E4Grid ion-select{
     width: 20%;
@@ -35,9 +35,22 @@ ion-grid.E4Grid ion-select{
     
 }
 ion-grid.E4Grid ion-label{
+    color:white;
     text-decoration-color: white;
 }
 ion-grid.E4Grid p{
     height: 100%;
     text-align:center;
+}
+ion-row.nextButton{
+    padding-top: 100%
+}
+h6{
+    color: #fff;
+    padding-left: 8%;
+    text-align: left;
+    
+}
+ion-button{
+    
 }
