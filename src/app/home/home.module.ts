@@ -14,7 +14,8 @@ const routes: Routes = [
     children: [      
       { path: 'home', loadChildren: '../main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
       { path: 'goals',             loadChildren: '../goals-tab/goals-tab.module#GoalsTabPageModule' },
-      { path: 'rewards', loadChildren: '../main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
+      { path: 'rewards', loadChildren: './rewards-tab/rewards-tab.module#RewardsTabPageModule' },
+
     ]
   },
   {

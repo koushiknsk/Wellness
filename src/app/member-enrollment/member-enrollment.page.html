@@ -1,0 +1,65 @@
+<ion-content class="background">
+
+  <ion-toolbar style="opacity:0.5;">
+    <ion-title>
+      MEMBER ENROLLMENT
+    </ion-title>
+  </ion-toolbar>
+  <!-- grid-->
+  
+  <ion-grid style="height: 100%">
+
+    <ion-row class="ipn">
+
+      <ion-col id="label" class="ion-align-self-end">
+        <ion-item color="transparent" lines="none" >          
+        <ion-input id="input" readonly >INSURANCE POLICY NUMBER</ion-input>       
+        </ion-item>
+      </ion-col>
+
+      <ion-col class="ion-align-self-end">
+          <ion-item color="transparent" lines="none">
+            <ion-label slot="end">01164137</ion-label>
+          </ion-item>
+        </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col class="ion-align-self-end">
+        <ion-item color="transparent" lines="none">
+          <ion-label>DATE OF BIRTH</ion-label>
+          <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col class="ion-align-self-end">
+        <ion-item color="transparent" lines="none">
+          <ion-input type="email" placeholder="EMAIL ADDRESS" value="Cathy.muller@gmail.com"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="ion-align-self-end">
+            <ion-select placeholder="GENDER"  value="female" interface="popover">
+                <ion-select-option value="male">Male</ion-select-option>
+                <ion-select-option value="female">Female</ion-select-option>
+              </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col class="ion-align-self-end">
+              <ion-input type="tel" placeholder="MOBILE NUMBER" value="+852 6689251"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-align-self-end">
+                <ion-button expand="block" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active" class="ion-align-self-center">ENROLL</ion-button>
+            </ion-col>
+          </ion-row>
+  </ion-grid>
+</ion-content>

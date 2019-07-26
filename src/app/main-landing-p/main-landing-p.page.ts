@@ -7,17 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLandingPagePage implements OnInit {
 
-  isBVisible : boolean = false;
-  isSVisible : boolean = false;
-  isGVisible : boolean = false;
-  isPVisible : boolean = false;
-  isMainContentCardVisible :boolean = true;
-  isEarnMorePointsCardVisible : boolean =false;
-  isNutritionAssesmentCardVisible: boolean =false;
-  isSleepTrackingCardVisible: boolean =false;
+  isBVisible: boolean = false;
+  isSVisible: boolean = false;
+  isGVisible: boolean = false;
+  isPVisible: boolean = false;
+  isMainContentCardVisible: boolean = true;
+  isEarnMorePointsCardVisible: boolean = false;
+  isNutritionAssesmentCardVisible: boolean = false;
+  isSleepTrackingCardVisible: boolean = false;
+  isNutritionAssesDetailsPageVisible: boolean = false;
+  isNutritionCamPageVisible: boolean = false;
+  isFitnessDevicesPageVisible: boolean = false;
 
-  pointsEarned : number
-  pointsRequired : number
+  pointsEarned: number
+  pointsRequired: number
 
   constructor() {
     this.setPointsEarned(20000);
@@ -29,50 +32,84 @@ export class MainLandingPagePage implements OnInit {
 
   }
 
-  setPointsEarned(pointsEarned : number){
+  setPointsEarned(pointsEarned: number) {
     this.pointsEarned = pointsEarned;
   }
 
-  setPointsRequired(pointsRequired : number){
+  setPointsRequired(pointsRequired: number) {
     this.pointsRequired = pointsRequired;
   }
 
-  setVisibility(){
+  setVisibility() {
 
-    if(this.pointsEarned >= 0 && this.pointsEarned < 10000){
+    if (this.pointsEarned >= 0 && this.pointsEarned < 10000) {
       this.isBVisible = true;
     }
-    else if(this.pointsEarned >= 10000 && this.pointsEarned < 20000){
+    else if (this.pointsEarned >= 10000 && this.pointsEarned < 20000) {
       this.isSVisible = true;
     }
-    else if(this.pointsEarned >= 20000 && this.pointsEarned < 30000){
+    else if (this.pointsEarned >= 20000 && this.pointsEarned < 30000) {
       this.isGVisible = true;
     }
-    else if(this.pointsEarned >= 30000 && this.pointsEarned <= 40000){
+    else if (this.pointsEarned >= 30000 && this.pointsEarned <= 40000) {
       this.isPVisible = true;
     }
 
   }
-  setEarnedPointsCardVisbility(){
-    this.isMainContentCardVisible=false;
-    this.isSleepTrackingCardVisible=false;
-    this.isNutritionAssesmentCardVisible=false;
-    this.isEarnMorePointsCardVisible=true;
+  setEarnedPointsCardVisbility() {
+    this.isMainContentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = true;
   }
-  setNutritionPageCardVisibility(){
-    this.isMainContentCardVisible=false;
-    this.isEarnMorePointsCardVisible=false;
-    this.isSleepTrackingCardVisible=false;
-    this.isNutritionAssesmentCardVisible=true;
+  setNutritionPageCardVisibility() {
+    this.isMainContentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = true;
   }
-  setSleepPageCardVisibility(){
-    this.isMainContentCardVisible=false;
-    this.isEarnMorePointsCardVisible=false;
-    this.isNutritionAssesmentCardVisible=false;
-    this.isSleepTrackingCardVisible=true;
-   
+  setSleepPageCardVisibility() {
+    this.isMainContentCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = true;
   }
-  
+  setNutritionAssesDetailsVisibility() {
+    this.isMainContentCardVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = true;
+  }
+  setNutritionCamPageVisibility() {
+    this.isMainContentCardVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = true;
+  }
+  setFitnessPageVisibility() {
+    this.isMainContentCardVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = true;
 
+  }
 
 }

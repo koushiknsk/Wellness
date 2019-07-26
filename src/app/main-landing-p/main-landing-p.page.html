@@ -46,122 +46,242 @@
 
   </ion-grid>
 
-  <br/>
+  <br />
 
   <!-- Points grid starts here-->
-  <ion-card *ngIf="isMainContentCardVisible" >
-  <ion-grid>
+  <ion-card *ngIf="isMainContentCardVisible">
+    <ion-grid>
 
-    <!-- Row : pts-ernd-thisYear-->
-    <ion-row>
-      <ion-col class="ion-align-self-end">
-        <ion-item lines="none">
-          <ion-label>Points earned this year</ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col class="ion-align-self-end">
-        <ion-item lines="none">
-          <ion-input [value]=pointsEarned readonly></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <!-- Row : pts-req-nextYear -->
-    <ion-row>
-      <ion-col class="ion-align-self-end">
-        <ion-item lines="none">
-          <ion-label>Points required for next year</ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col class="ion-align-self-end">
-        <ion-item lines="none">
-          <ion-input [value]=pointsRequired readonly></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
-
-
-  <br />
-  <ion-item lines="none">
-    <ion-icon slot="start" name="logo-buffer"></ion-icon>
-    <ion-label stacked (click)="setEarnedPointsCardVisbility($event)">Earn More points</ion-label>
-    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-  </ion-item>
-
-  <ion-item lines="none">
-    <ion-icon slot="start" name="menu"></ion-icon>
-    <ion-label>Points Statement</ion-label>
-    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-  </ion-item>
-
-  <ion-item lines="none">
-    <ion-icon slot="start" name="heart"></ion-icon>
-    <ion-label>Health Assessments</ion-label>
-    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-  </ion-item>
-
-  <ion-item lines="none">
-    <ion-icon slot="start" name="phone-portrait"></ion-icon>
-    <ion-label>Fitness Devices</ion-label>
-    <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-  </ion-item>
-</ion-card>
-<ion-card *ngIf="isEarnMorePointsCardVisible">
-    
-      <div>
-        <p> 
-            Below are all the ways you can earn points. Points to stay healthy and active. The more you earn, the higher your status and greater the rewards.
-          </p>
-          </div>
-       <div>
-        <ion-item lines="none">
-            <ion-icon slot="start" name="alarm"></ion-icon>
-            <ion-label stacked (click)="setSleepPageCardVisibility($event)" >Sleep Tracking</ion-label>
-            <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-       </ion-item> 
-       <ion-item lines="none">
-          <ion-icon slot="start" name="pizza"></ion-icon>
-          <ion-label stacked (click)="setNutritionPageCardVisibility($event)">Nutrition Assesment</ion-label>
-          <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-     </ion-item>  
-    </div> 
-      
-  </ion-card>
-
- 
-  <ion-card *ngIf="isNutritionAssesmentCardVisible">
-    
-      <div>
-        <p> 
-          The Nutrition Assesment helps you assess your eating habits and gives you suggestions on how you can improve on your diet and lifestyle. This assessment can be completed on this application with the help of below button.      
-        </p>       
-         </div>
-       <div>
-          <ion-row>
-              <ion-col class="ion-align-self-end">
-          <ion-button expand="block" class="ion-align-self-center" >Complete Your Assesment Here</ion-button>
+      <!-- Row : pts-ernd-thisYear-->
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-item lines="none">
+            <ion-label>Points earned this year</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col class="ion-align-self-end">
+          <ion-item lines="none">
+            <ion-input [value]=pointsEarned readonly></ion-input>
+          </ion-item>
         </ion-col>
       </ion-row>
-    </div> 
-      
+
+      <!-- Row : pts-req-nextYear -->
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-item lines="none">
+            <ion-label>Points required for next year</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col class="ion-align-self-end">
+          <ion-item lines="none">
+            <ion-input [value]=pointsRequired readonly></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+    <br />
+    <ion-item lines="none">
+      <ion-icon slot="start" name="logo-buffer"></ion-icon>
+      <ion-label stacked (click)="setEarnedPointsCardVisbility($event)">Earn More points</ion-label>
+      <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon slot="start" name="menu"></ion-icon>
+      <ion-label>Points Statement</ion-label>
+      <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon slot="start" name="heart"></ion-icon>
+      <ion-label>Health Assessments</ion-label>
+      <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon slot="start" name="phone-portrait"></ion-icon>
+      <ion-label stacked (click)="setFitnessPageVisibility($event)">Fitness Devices</ion-label>
+      <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-card>
+  <ion-card *ngIf="isEarnMorePointsCardVisible">
+
+    <div>
+      <p>
+        Below are all the ways you can earn points. Points to stay healthy and active. The more you earn, the higher
+        your status and greater the rewards.
+      </p>
+    </div>
+    <div>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="alarm"></ion-icon>
+        <ion-label stacked (click)="setSleepPageCardVisibility($event)">Sleep Tracking</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="pizza"></ion-icon>
+        <ion-label stacked (click)="setNutritionPageCardVisibility($event)">Nutrition Assesment</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+    </div>
+
+  </ion-card>
+
+
+  <ion-card *ngIf="isNutritionAssesmentCardVisible">
+
+    <div>
+      <p>
+        The Nutrition Assesment helps you assess your eating habits and gives you suggestions on how you can improve on
+        your diet and lifestyle. This assessment can be completed on this application with the help of below button.
+      </p>
+    </div>
+    <div>
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionAssesDetailsVisibility($event)">
+            Complete Your Assesment Here</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+
   </ion-card>
   <ion-card *ngIf="isSleepTrackingCardVisible">
-    
-      <div>
-        <p> 
-          We all know a good night's sleep is important to your sustained physical and mental wellbeing - so Werve is rewarding you with 10 points every time you get a good night's sleep of seven hours or longer. Track your sleep with a compatible app or device from either Garmin, Fitbit, Moves or Polar.
-         </p>       
-         </div>
-       <div>
-          <ion-row>
-              <ion-col class="ion-align-self-end">
-          <ion-button expand="block" class="ion-align-self-center" >Link Your Device Here</ion-button>
+
+    <div>
+      <p>
+        We all know a good night's sleep is important to your sustained physical and mental wellbeing - so Werve is
+        rewarding you with 10 points every time you get a good night's sleep of seven hours or longer. Track your sleep
+        with a compatible app or device from either Garmin, Fitbit, Moves or Polar.
+      </p>
+    </div>
+    <div>
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center">Link Your Device Here</ion-button>
         </ion-col>
       </ion-row>
-    </div> 
-      
+    </div>
+
   </ion-card>
+  <ion-card class="nutritionAssesDetailsCard" *ngIf="isNutritionAssesDetailsPageVisible">
+    <ion-grid class="nutritionAssesDetailsCard">
+      <ion-row>
+        <ion-item >
+        <ion-label>In a week how often you do your breakfast? </ion-label>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        
+        <ion-col class="ion-align-self-end">
+            <ion-item >
+          <ion-select value="everyday" interface="popover">
+            <ion-select-option value="everyday">Everyday</ion-select-option>
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+        <ion-item >
+        <ion-label>In a week how often you do your Lunch? </ion-label>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-item >
+          <ion-select value="everyday" interface="popover">
+            <ion-select-option value="everyday">Everyday</ion-select-option>
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-item  >
+        <ion-label>In a week how often you do your Junk food? </ion-label>
+      </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-item >
+          <ion-select value="5" interface="popover">
+            <ion-select-option value="everyday">Everyday</ion-select-option>
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionCamPageVisibility($event)">Next
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="nutritionCamCard" *ngIf="isNutritionCamPageVisible">
+    <ion-grid style="height: 100%">
+
+      <ion-row class="nutricationCamLabel">
+        <ion-label>What have you eat today ? Please upload the reciept. </ion-label>
+      </ion-row>
+
+      <ion-row>    
+          <ion-icon name="camera" class="cameraCSS"></ion-icon>
+      </ion-row>
+
+      <ion-row style="padding-top: 30%">
+        <ion-col class="ion-align-self-end">
+          <ion-button expand="block" class="ion-align-self-center">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </ion-card>
+
+  <ion-card *ngIf="isFitnessDevicesPageVisible">
+
+    <div>
+      <p> Werve allows you to contact your profile with the various fitness devices. You can link or de-link with these
+        devices anytime</p>
+    </div>
+    <div>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="bed"></ion-icon>
+        <ion-label>Garmin</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="heart-half"></ion-icon>
+        <ion-label>Fitbit</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="heart-half"></ion-icon>
+        <ion-label>Samsung Watch</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none">
+       <ion-icon  slot="start" name="logo-apple"></ion-icon>
+        <ion-label>Apple Watch</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+    </div>
+
+  </ion-card>
+
 
 </ion-content>
