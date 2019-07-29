@@ -7,10 +7,37 @@ import { Component, OnInit} from '@angular/core';
 })
 export class Enrollmentp1Page implements OnInit {
 
-  constructor() { }
+  isOneVisible : Boolean = false
+  isTwoVisible : Boolean = false
+  isThreeVisible : Boolean = false
+  isFourVisible : Boolean = false
+  isMCVisible : Boolean
+
+  constructor() { 
+    this.isMCVisible  = true;
+  }
 
 
   ngOnInit() {}
-    
+
+  enrollmentOne(){
+    this.isOneVisible = true;
+    this.isMCVisible = false;
+  }  
+  
+  oneBack(){
+    this.isOneVisible = false;
+    this.isMCVisible = true;
+  }
+
+  enrollmentTwo(){
+    this.isTwoVisible = true;
+    this.isMCVisible = false;
+  }  
+  
+  twoBack(){
+    this.isTwoVisible = false;
+    this.isMCVisible = true;
+  }
     
 }

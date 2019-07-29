@@ -1,56 +1,12 @@
-ion-content.background{
+.mainContent{
     height: 100%;
-    --background: linear-gradient(-45deg, rgb(59,103,158) 0%, rgb(43,136,217) 50%, rgb(32,124,202) 51%, rgb(125,185,232) 100%) !important;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
 }
-ion-grid.E1Grid ion-row{
-    color: white;
-    font-size: 90%;
-    padding: 6%;
-}
-ion-grid.E2Grid ion-row{
-    padding: 2%;
-    color: white;
-    font-size: 90%;
-}
-ion-grid.E2Grid ion-item{
-    size: 80%;
-}
-ion-grid.E3Grid ion-row{
-    color: white;
-    font-size: 90%;
-    padding: 6%;
-}
-ion-grid.E4Grid ion-row{
-    color: white;
-    font-size: 100%;
-    padding: 3%;
-}
-ion-grid.E4Grid ion-select-option{
-    color: white;
-    text-decoration-color: white;
-}
-ion-grid.E4Grid ion-select{
-    width: 20%;
-    background-color: #fff;
-    
-}
-ion-grid.E4Grid ion-label{
-    color:white;
-    text-decoration-color: white;
-}
-ion-grid.E4Grid p{
-    height: 100%;
-    text-align:center;
-}
-ion-row.nextButton{
-    padding-top: 100%
-}
-h6{
-    color: #fff;
-    padding-left: 8%;
-    text-align: left;
-    
-}
-ion-button{
-    
+
+
+div .ion-avatar{
+    justify-content: center;
+    display: flex;
 }

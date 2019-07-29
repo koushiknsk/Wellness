@@ -1,236 +1,156 @@
-<ion-content class="background">
+<body>
+  <div class="mainContent" *ngIf="isMCVisible">
+    <ion-card>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="logo-buffer"></ion-icon>
+        <ion-label stacked (click)="enrollmentOne($event)">Enrollment P1</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
 
-  <ion-toolbar style="opacity:0.5;">
-    <ion-title>
-      SET-UP YOUR HEALTH PROFILE
-    </ion-title>
-  </ion-toolbar>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="menu"></ion-icon>
+        <ion-label stacked (click)="enrollmentTwo($event)">Enrollment P2</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
 
-  <ion-slides  style="height: 80%" > 
-  <ion-slide>
-    <!--Enrollment 1 Grid-->
-  <ion-grid style="height: 100%" class="E1Grid">
+      <ion-item lines="none">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        <ion-label stacked (click)="enrollmentThree($event)">Enrollment P3</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
 
-    <!--Height Grid Starts Here-->
-    <ion-row>
-      <ion-col class="ion-align-self-end">
-        <p>Please tell us your height.</p>
-        <ion-select value="1.2" interface="popover">
-          <ion-select-option value="1.2">1.2 Meters</ion-select-option>
-          <ion-select-option value="1.4">1.4 Meters</ion-select-option>
-          <ion-select-option value="1.6">1.6 Meters</ion-select-option>
-        </ion-select>
-      </ion-col>
-    </ion-row>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="phone-portrait"></ion-icon>
+        <ion-label stacked (click)="enrollmentFour($event)">Enrollment P4</ion-label>
+        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      </ion-item>
 
-    <!--Weight Grid Starts Here-->
-    <ion-row>
-      <ion-col class="ion-align-self-end">
-          <p>Please tell us your weight.</p>
+    </ion-card>
+  </div>
+
+  <div class="enrollmentTwo" *ngIf="isOneVisible">
+
+    <ion-card>
+      <ion-list>
+        <ion-list-header>
+          Recent Conversations
+        </ion-list-header>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/images/Height.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>Enter your Height</h2>
+          </ion-label>
+          <ion-select value="1.2" interface="popover">
+            <ion-select-option value="1.2">1.2 Meters</ion-select-option>
+            <ion-select-option value="1.4">1.4 Meters</ion-select-option>
+            <ion-select-option value="1.6">1.6 Meters</ion-select-option>
+          </ion-select>
+          <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
+        </ion-item>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/images/Weight.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Enter your Weight</h2>
+          </ion-label>
           <ion-select value="80" interface="popover">
             <ion-select-option value="80">80 Kilograms</ion-select-option>
             <ion-select-option value="90">90 Kilograms</ion-select-option>
             <ion-select-option value="100">100 Kilograms</ion-select-option>
           </ion-select>
-      </ion-col>
-    </ion-row>
+        </ion-item>
 
-    <!--Waist Grid Starts Here-->
-    <ion-row>
-      <ion-col class="ion-align-self-end">
-        <p>Please tell us your waist size.</p>
-        <ion-select value="32" interface="popover">
-          <ion-select-option value="32">32 inches</ion-select-option>
-          <ion-select-option value="34">34 inches</ion-select-option>
-          <ion-select-option value="36">36 inches</ion-select-option>
-        </ion-select>
-      </ion-col>
-    </ion-row>
- </ion-grid>
-</ion-slide>
-<!--Enrollment 2 Grid-->
-<ion-slide>
-    <ion-grid style="height: 100%" class="E2Grid">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/images/Waist.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Enter your Waist</h2>
+          </ion-label>
+          <ion-select value="32" interface="popover">
+            <ion-select-option value="32">32 inches</ion-select-option>
+            <ion-select-option value="34">34 inches</ion-select-option>
+            <ion-select-option value="36">36 inches</ion-select-option>
+          </ion-select>
+        </ion-item>
 
-        <!--Exercise Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>How many days in a week do you exercise ?</p>
-            <ion-select value="3" interface="popover">
-              <ion-select-option value="3">3 days</ion-select-option>
-              <ion-select-option value="4">4 days</ion-select-option>
-              <ion-select-option value="5">5 days</ion-select-option>
+      </ion-list>
+    </ion-card>
+
+    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="oneBack($event)"
+      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
+  </div>
+
+  <div class="enrollmentThree" *ngIf="isTwoVisible">
+
+    <ion-card>
+      <ion-list>
+        <ion-list-header>
+          Recent Conversations
+        </ion-list-header>
+
+        <div class="ion-avatar">
+          <ion-avatar>
+            <img src="assets/images/exercise_two.png">
+          </ion-avatar>
+        </div>
+        <ion-item>
+          <ion-label>
+            <h6>How many days in a week do you exercise ?</h6>
+          </ion-label>
+          <ion-select value="3" interface="popover">
+            <ion-select-option value="3">3 days</ion-select-option>
+            <ion-select-option value="4">4 days</ion-select-option>
+            <ion-select-option value="5">5 days</ion-select-option>
+          </ion-select>
+          <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
+        </ion-item>
+
+        <div class="ion-avatar">
+            <ion-avatar>
+              <img src="assets/images/exercise_two.png">
+            </ion-avatar>
+          </div>
+          <ion-item>
+            <ion-label>
+              <h6>Please tell us your blood pressure</h6>
+            </ion-label>
+            <ion-input></ion-input>
+            <ion-select value="Systolic" interface="popover">              
+              <ion-select-option value="Systolic">Systolic (mmHG)</ion-select-option>
+              <ion-select-option value="Diastolic">Diastolic (mmHG)</ion-select-option>
             </ion-select>
-          </ion-col>
-        </ion-row>
-    
-        <!--BloodPressure Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>Please tell us your blood pressure</p>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-item>
-              <ion-label>Systolic</ion-label>
-              <ion-input placeholder="mgHG"></ion-input>
-            </ion-item>
-          </ion-col>
-          <ion-col class="ion-align-self-end">
-            <ion-item>
-              <ion-label>Diastolic</ion-label>
-              <ion-input placeholder="mmHG"></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-    
-        <!--Glucose Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>Please tell us your glucose readings (mmol/L).</p>
-            <ion-select value="22" interface="popover">
-              <ion-select-option value="22">22</ion-select-option>
-              <ion-select-option value="24">24</ion-select-option>
-              <ion-select-option value="26">26</ion-select-option>
-            </ion-select>
-          </ion-col>
-        </ion-row>
-    
-        <!--Cholesterol Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>Please tell us your Cholesterol readings (mmol/L).</p>
-            <ion-select value="22" interface="popover">
-              <ion-select-option value="22">22</ion-select-option>
-              <ion-select-option value="24">24</ion-select-option>
-              <ion-select-option value="26">26</ion-select-option>
-            </ion-select>
-          </ion-col>
-        </ion-row>
-        </ion-grid>
-</ion-slide>
-<!--Enrollment 3 Grid-->
-<ion-slide>
-    <ion-grid style="height: 100%" class="E3Grid">
-  
-        <!--Cigarettes Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>How many ciragettes do you smoke in a day ?</p>
-            <ion-select value="3" interface="popover">
-              <ion-select-option value="3">3</ion-select-option>
-              <ion-select-option value="4">4</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-            </ion-select>
-          </ion-col>
-        </ion-row>
-    
-        <!--Drink Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-              <p>How many alcoholic drinks you consume per week ?</p>
-              <ion-select value="3" interface="popover">
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                </ion-select>
-          </ion-col>
-        </ion-row>
-    
-        <!--Mood Grid Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <p>Please tell us your mood in last month</p>
-            <ion-select value="verypositive" interface="popover">
-              <ion-select-option value="verypositive">Very Positive</ion-select-option>
-              <ion-select-option value="positive">Positive</ion-select-option>
-              <ion-select-option value="negative">Negative</ion-select-option>
-            </ion-select>
-          </ion-col>
-        </ion-row>
-        </ion-grid>
-        
-</ion-slide>
-<!--Enrollment 4 Grid-->
-<ion-slide>
-    <ion-grid style="height: 100%" class="E4Grid">
-  <h6 class="ion-align-self-end">Describe your eating habits</h6>      
-<!--Grains Grid Starts Here-->
-        <ion-row>
-            <ion-col class="ion-align-self-end">
-              <ion-item color="transparent" lines="none">
-              <ion-label >Whole Grains</ion-label>
-              <ion-select value="1" interface="popover">
-                <ion-select-option value="1">1</ion-select-option>
-                <ion-select-option value="2">2 </ion-select-option>
-                <ion-select-option value="3">3 </ion-select-option>
-              </ion-select>
-            </ion-item>
-            </ion-col>
-          </ion-row>
-    
-        <!--Low_Fat Grid Starts Here-->
-        <ion-row>
-            <ion-col class="ion-align-self-end">
-              <ion-item color="transparent" lines="none">
-              <ion-label >Low Fat Daily</ion-label>
-              <ion-select value="2" interface="popover">
-                <ion-select-option value="1">1 </ion-select-option>
-                <ion-select-option value="2">2</ion-select-option>
-                <ion-select-option value="3">3 </ion-select-option>
-              </ion-select>
-            </ion-item>
-            </ion-col>
-          </ion-row>
-    
-        <!--Meat Grid Starts Here-->
-        <ion-row>
-            <ion-col class="ion-align-self-end">
-              <ion-item color="transparent" lines="none">
-              <ion-label >Lean Meat</ion-label>
-              <ion-select value="2" interface="popover">
-                  <ion-select-option value="1">1 </ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3 </ion-select-option>
-                </ion-select>
-            </ion-item>
-            </ion-col>
-          </ion-row>
-    
-        <!--Food Grid Starts Here-->
-        <ion-row>
-            <ion-col class="ion-align-self-end">
-              <ion-item color="transparent" lines="none">
-              <ion-label >Salty Food</ion-label>
-              <ion-select value="0" interface="popover">
-                  <ion-select-option value="0">0 </ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3 </ion-select-option>
-                </ion-select>
-            </ion-item>
-            </ion-col>
-          </ion-row>
-    
-        <!--Cook Starts Here-->
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-item color="transparent" lines="none">
-            <ion-label >Cook with Salt</ion-label>
-            <ion-select value="3" interface="popover">
-                <ion-select-option value="1">1 </ion-select-option>
-                <ion-select-option value="2">2</ion-select-option>
-                <ion-select-option value="3">3 </ion-select-option>
-              </ion-select>
+            <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
           </ion-item>
-          </ion-col>
-        </ion-row>
-        
-      </ion-grid> 
-      <!--Next button-->
-        <ion-button expand="block" [routerLink]="['/home']"  routerLinkActive="router-link-active" class="nextButton" style="position: absolute; width:288px; margin-left: -144px; left: 50%; bottom: 10%" >NEXT</ion-button>   
-</ion-slide>
-</ion-slides>
 
 
-</ion-content>
+
+
+
+      </ion-list>
+    </ion-card>
+
+    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="twoBack($event)"
+      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
+
+  </div>
+
+  <div class="enrollmentFour" *ngIf="isThreeVisible">
+
+    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="back($event)"
+      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
+
+  </div>
+
+  <div class="enrollmentOne" *ngIf="isFourVisible">
+
+    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="back($event)"
+      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
+
+  </div>
+</body>
