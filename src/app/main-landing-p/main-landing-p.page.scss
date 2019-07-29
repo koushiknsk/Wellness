@@ -1,56 +1,60 @@
-.icon div{
-    height: 100%;
-}
-.icon ion-icon{
-    height: 100%;
-    width: 100%;
-}
-ion-row{
-    padding: 0%;
-}
-ion-item{
-    background-color: #C2C354;
-}
 
-ion-col{
-    padding: 0%;   //to remove the space b/w cells
-}
-ion-card{
-    box-shadow:none ;
-}
-ion-label{
-    pointer-events:all
-}
-.progressbar div{    
-    text-align: center;
-    padding: 5%;
-}
-.progressbar #bronze{
-    background-color: #C2C354;
-}
-.progressbar #silver{
-    background-color: #54C3B3;
-}
-.progressbar #gold{
-    background-color: #54ACC3;
-}
-.progressbar #platinum{    
-    background-color: #A354C3;
-}
-p{
-    padding: 5%;
-}
-ion-card.nutritionAssesDetailsCard, ion-card.nutritionCamCard{
+.mainContainer{
     height:100%;
 }
-ion-icon.cameraCSS{
-    font-size:100px;
-    padding-left: 35%;
+
+.status-grid{
+    height:20%;
+    margin: auto;
+    //display: flex;
+    justify-content: center;
 }
-ion-row.nutricationCamLabel{
-    padding-top: 10%;
-    padding-bottom: 20%;
-    font-size: 120%;
-    font-weight: 200;
-    padding-left: 5%
+
+.progressBar{
+    height: 20%;
 }
+
+.mainCards{
+    height: 40%;
+}
+.mainCards ion-grid{
+    //box-sizing: inherit;
+    //background-color: blue;
+    height: 100%;    
+}
+.mainCards ion-row{
+    background-color: #fff;
+    height: 50%;
+}
+
+.mainCards ion-col{
+    //background-color: #fff;
+    height: 100%;
+}
+.mainCards ion-card{
+    height: 100%;
+    margin: auto;
+}
+ion-card.earnMorePoints{
+    background-color: #ff9a60;
+}
+ion-card.pointsStatement{
+    background-color: #33d8fd;
+}
+ion-card.healthAssesment{
+    background-color: #b633fd;
+}
+ion-card.fitnessDevices{
+    background-color: #fd3355;
+}
+div.ion-avatar{
+    justify-content: center;    
+    display: flex;
+    padding-top: 5%;
+}
+.mainCards ion-label{
+    text-align: center;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+   

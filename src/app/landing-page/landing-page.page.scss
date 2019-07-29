@@ -1,63 +1,74 @@
-ion-content.background{
-    --background: linear-gradient(-45deg, rgb(59,103,158) 0%, rgb(43,136,217) 50%, rgb(32,124,202) 51%, rgb(125,185,232) 100%) !important;
-}
-
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
-// Small devices
-@mixin sm {
+ion-content.background {
+    --background: linear-gradient(
+      -45deg,
+      rgb(59, 103, 158) 0%,
+      rgb(43, 136, 217) 50%,
+      rgb(32, 124, 202) 51%,
+      rgb(125, 185, 232) 100%
+    ) !important;
+  }
+  
+  // Small tablets and large smartphones (landscape view)
+  $screen-sm-min: 576px;
+  
+  // Small tablets (portrait view)
+  $screen-md-min: 768px;
+  
+  // Tablets and small desktops
+  $screen-lg-min: 992px;
+  
+  // Large tablets and desktops
+  $screen-xl-min: 1200px;
+  
+  // Small devices
+  @mixin sm {
     @media (min-width: #{$screen-sm-min}) {
-        @content;
+      @content;
     }
- }
- 
- // Medium devices
- @mixin md {
+  }
+  
+  // Medium devices
+  @mixin md {
     @media (min-width: #{$screen-md-min}) {
-        @content;
+      @content;
     }
- }
- 
- // Large devices
- @mixin lg {
+  }
+  
+  // Large devices
+  @mixin lg {
     @media (min-width: #{$screen-lg-min}) {
-        @content;
+      @content;
     }
- }
- 
- // Extra large devices
- @mixin xl {
+  }
+  
+  // Extra large devices
+  @mixin xl {
     @media (min-width: #{$screen-xl-min}) {
-        @content;
+      @content;
     }
- }
-
- ion-img{
-
-    @include sm {
-        width: 35%; height:auto; margin-left: auto;margin-right: auto;
-    }
-
-    @include md {
-        width: 35%; height:auto; margin-left: auto;margin-right: auto;
-    }
-    
-     @include lg{
-        width: 30%; height:auto; margin-left: auto;margin-right: auto;
-     }
-
-     @include xl{
-        width: 20%; height:auto; margin-left: auto;margin-right: auto;
-     }
-
- }
+  }
+  
+  ion-img.capgemini {
+    height: 10%;
+  }
+  
+  ion-img.heartbeat {
+    height: 20%;
+  }
+  
+  h1,h2{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      //color: aqua;
+  }
+  
+  div.button{
+      height:20%;
+      padding-top: 15%;
+      padding-left: 10%;
+      padding-right: 10%;    
+  }
+  
+  ion-button{
+      color: white;
+          
+  }
