@@ -21,109 +21,98 @@
       </ion-grid>
     </div>
 
-    <div class="progressBar">
-          <circle-progress        
-          [percent] = 65
-          [outerStrokeColor]="'rgb(27, 60, 159)'"
-          [innerStrokeColor]="'rgb(129, 217, 236)'"
-          [titleFontSize]= "24"
-          [unitsFontSize]= "24"
-          [showSubtitle] = "true"
-          [animation]="true"
-          [animationDuration]="1000"
-          [startFromZero]="false"
-          [responsive]="true"
-          [lazy]="false"
-          subtitle="points achieved for current Level"
-          [subtitleFontSize]="10"
-          [subtitleFontWeight]=500
-        ></circle-progress>
-              
-    </div>
-
-    <div class="mainCards">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-
-            <ion-card class="earnMorePoints" button=true (click)=earnMorePoints()>
-              <div class="ion-avatar">
-                <ion-avatar>
-                  <img src="assets/images/earnPoints.jpg">
-                </ion-avatar>
-              </div>
-              <ion-item color="none" lines="none">
-                <ion-label>
-                  <h2>Get More Points</h2>
-                </ion-label>
-              </ion-item>
-            </ion-card>
-          </ion-col>
-
-          <ion-col>
-            <ion-card class="pointsStatement" button=true (click)=earnMorePoints()>
-              <div class="ion-avatar">
-                <ion-avatar>
-                  <img src="assets/images/coin.jpg">
-                </ion-avatar>
-              </div>
-              <ion-item color="none" lines="none">
-                <ion-label>
-                  <h2>Points Statement</h2>
-                </ion-label>
-              </ion-item>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-            <ion-card class="healthAssesment" button=true (click)=earnMorePoints()>
-              <div class="ion-avatar">
-                <ion-avatar>
-                  <img src="assets/images/healthAssesment.jpg">
-                </ion-avatar>
-              </div>
-              <ion-item color="none" lines="none">
-                <ion-label>
-                  <h2>Health Assessments</h2>
-                </ion-label>
-              </ion-item>
-            </ion-card>
-          </ion-col>
-
-          <ion-col>
-            <ion-card class="fitnessDevices" button=true (click)=earnMorePoints()>
-              <div class="ion-avatar">
-                <ion-avatar>
-                  <img src="assets/images/linkDevices.jpg">
-                </ion-avatar>
-              </div>
-              <ion-item color="none" lines="none">
-                <ion-label>
-                  <h2>Fitness Devices</h2>
-                </ion-label>
-              </ion-item>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-
-      </ion-grid>
-    </div>
-
+  <div class="progressBar" *ngIf="isMainContentCardVisible">
+        <circle-progress        
+        [percent] = 65
+        [outerStrokeColor]="'rgb(27, 60, 159)'"
+        [innerStrokeColor]="'rgb(129, 217, 236)'"
+        [titleFontSize]= "24"
+        [unitsFontSize]= "24"
+        [showSubtitle] = "true"
+        [animation]="true"
+        [animationDuration]="1000"
+        [startFromZero]="false"
+        [responsive]="true"
+        [lazy]="false"
+        subtitle="points achieved for current Level"
+        [subtitleFontSize]="10"
+        [subtitleFontWeight]=500
+      ></circle-progress>
+            
   </div>
 
-  <div class="pts-grid1">
-    <br />
-    <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
-    <br />
-    <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+  <div class="mainCards" *ngIf="isMainContentCardVisible">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <ion-card class="earnMorePoints" button=true (click)=setEarnedPointsCardVisbility()>
+            <div class="ion-avatar">
+              <ion-avatar>
+                <img src="assets/images/earnPoints.jpg">
+              </ion-avatar>
+            </div>
+            <ion-item color="none" lines="none">
+              <ion-label>
+                <h2>Get More Points</h2>
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="pointsStatement" button=true>
+            <div class="ion-avatar">
+              <ion-avatar>
+                <img src="assets/images/coin.jpg">
+              </ion-avatar>
+            </div>
+            <ion-item color="none" lines="none">
+              <ion-label>
+                <h2>Points Statement</h2>
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="healthAssesment" button=true>
+            <div class="ion-avatar">
+              <ion-avatar>
+                <img src="assets/images/healthAssesment.jpg">
+              </ion-avatar>
+            </div>
+            <ion-item color="none" lines="none">
+              <ion-label>
+                <h2>Health Assessments</h2>
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="fitnessDevices" button=true (click)=setFitnessPageVisibility($event)>
+            <div class="ion-avatar">
+              <ion-avatar>
+                <img src="assets/images/linkDevices.jpg">
+              </ion-avatar>
+            </div>
+            <ion-item color="none" lines="none">
+              <ion-label>
+                <h2>Fitness Devices</h2>
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
   </div>
 
-
-
-
-  <ion-card *ngIf="isEarnMorePointsCardVisible">
+  <!-- EarnMorePoints -->
+  <ion-card *ngIf="isEarnMorePointsCardVisible" >
 
     <div>
       <p>
@@ -145,6 +134,40 @@
     </div>
 
   </ion-card>
+
+  <!-- FitnessDevices -->
+  <ion-card *ngIf="isFitnessDevicesPageVisible">
+
+        <div>
+          <p> Werve allows you to contact your profile with the various fitness devices. You can link or de-link with these
+            devices anytime</p>
+        </div>
+        <div>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="bed"></ion-icon>
+            <ion-label>Garmin</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="heart-half"></ion-icon>
+            <ion-label>Fitbit</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="heart-half"></ion-icon>
+            <ion-label>Samsung Watch</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="logo-apple"></ion-icon>
+            <ion-label>Apple Watch</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+          </ion-item>
+        </div>
+    
+  </ion-card>
+
+  <!-- EarnMorePoint - Nutrition Assesment_1 -->
   <ion-card *ngIf="isNutritionAssesmentCardVisible">
 
     <div>
@@ -161,8 +184,90 @@
         </ion-col>
       </ion-row>
     </div>
-
   </ion-card>
+
+  <!-- EarnMorePoint - Nutrition Assesment_2 -->
+  <ion-card class="nutritionAssesDetailsCard" *ngIf="isNutritionAssesDetailsPageVisible">
+      <ion-grid class="nutritionAssesDetailsCard">
+        <ion-row>
+          <ion-item>
+            <ion-label text-wrap>In a week how often you do your breakfast? </ion-label>
+            <ion-select value="everyday" interface="popover">
+              <ion-select-option value="everyday">Everyday</ion-select-option>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>            
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+        </ion-row>
+  
+        <ion-row>
+          <ion-item>
+            <ion-label text-wrap>In a week how often you do your Lunch? </ion-label>
+            <ion-select value="everyday" interface="popover">
+              <ion-select-option value="everyday">Everyday</ion-select-option>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>            
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-row>
+  
+        <ion-row>
+          <ion-item>
+            <ion-label text-wrap>In a week how often you do your Junk food? </ion-label>
+            <ion-select value="5" interface="popover">
+                <ion-select-option value="everyday">Everyday</ion-select-option>
+                <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>            
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              </ion-select>
+          </ion-item>
+        </ion-row>
+       
+        <ion-row>
+          <ion-col class="ion-align-self-end">
+            <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionCamPageVisibility($event)">Next
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+  
+  <!-- EarnMorePoint - Nutrition Assesment_3 -->
+  <ion-card class="nutritionCamCard" *ngIf="isNutritionCamPageVisible">
+      <ion-grid style="height: 100%">
+  
+        <ion-row class="nutricationCamLabel">
+          <ion-label>What have you eat today ? Please upload the reciept. </ion-label>
+        </ion-row>
+  
+        <ion-row>
+          <ion-icon name="camera" class="cameraCSS"></ion-icon>
+        </ion-row>
+  
+        <ion-row style="padding-top: 30%">
+          <ion-col class="ion-align-self-end">
+            <ion-button expand="block" class="ion-align-self-center">Submit</ion-button>
+          </ion-col>
+        </ion-row>
+  
+      </ion-grid>
+  
+  </ion-card>
+
+  <!-- EarnMorePoint - Sleep Tracking -->
   <ion-card *ngIf="isSleepTrackingCardVisible">
 
     <div>
@@ -181,119 +286,6 @@
     </div>
 
   </ion-card>
-
-  <ion-card class="nutritionAssesDetailsCard" *ngIf="isNutritionAssesDetailsPageVisible">
-    <ion-grid class="nutritionAssesDetailsCard">
-      <ion-row>
-        <ion-item>
-          <ion-label>In a week how often you do your breakfast? </ion-label>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-
-        <ion-col class="ion-align-self-end">
-          <ion-item>
-            <ion-select value="everyday" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-
-      </ion-row>
-
-      <ion-row>
-        <ion-item>
-          <ion-label>In a week how often you do your Lunch? </ion-label>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <ion-item>
-            <ion-select value="everyday" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-item>
-          <ion-label>In a week how often you do your Junk food? </ion-label>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <ion-item>
-            <ion-select value="5" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionCamPageVisibility($event)">Next
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-  <ion-card class="nutritionCamCard" *ngIf="isNutritionCamPageVisible">
-    <ion-grid style="height: 100%">
-
-      <ion-row class="nutricationCamLabel">
-        <ion-label>What have you eat today ? Please upload the reciept. </ion-label>
-      </ion-row>
-
-      <ion-row>
-        <ion-icon name="camera" class="cameraCSS"></ion-icon>
-      </ion-row>
-
-      <ion-row style="padding-top: 30%">
-        <ion-col class="ion-align-self-end">
-          <ion-button expand="block" class="ion-align-self-center">Submit</ion-button>
-        </ion-col>
-      </ion-row>
-
-    </ion-grid>
-
-  </ion-card>
-  <ion-card *ngIf="isFitnessDevicesPageVisible">
-
-    <div>
-      <p> Werve allows you to contact your profile with the various fitness devices. You can link or de-link with these
-        devices anytime</p>
-    </div>
-    <div>
-      <ion-item lines="none">
-        <ion-icon slot="start" name="bed"></ion-icon>
-        <ion-label>Garmin</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon slot="start" name="heart-half"></ion-icon>
-        <ion-label>Fitbit</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon slot="start" name="heart-half"></ion-icon>
-        <ion-label>Samsung Watch</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon slot="start" name="logo-apple"></ion-icon>
-        <ion-label>Apple Watch</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
-    </div>
-
-  </ion-card>
-
-
+  
+  </div>  
 </body>

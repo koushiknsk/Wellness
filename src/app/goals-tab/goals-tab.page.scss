@@ -1,42 +1,4 @@
-.icon div{
-    height: 100%;
-}
-.icon ion-icon{
-    height: 100%;
-    width: 100%;
-}
-ion-row{
-    padding: 0%;
-}
-ion-item{
-    background-color: #C2C354;
-}
 
-ion-col{
-    padding: 0%;   //to remove the space b/w cells
-}
-ion-card{
-    box-shadow:none ;
-}
-ion-label{
-    pointer-events:all
-}
-.progressbar div{    
-    text-align: center;
-    padding: 5%;
-}
-.progressbar #bronze{
-    background-color: #C2C354;
-}
-.progressbar #silver{
-    background-color: #54C3B3;
-}
-.progressbar #gold{
-    background-color: #54ACC3;
-}
-.progressbar #platinum{    
-    background-color: #A354C3;
-}
 p{
     padding: 5%;
 }
