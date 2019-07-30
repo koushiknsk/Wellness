@@ -1,13 +1,9 @@
-
-ion-content.background{
-    height: 100%;
-    --background: linear-gradient(-45deg, rgb(59,103,158) 0%, rgb(43,136,217) 50%, rgb(32,124,202) 51%, rgb(125,185,232) 100%) !important;
+ion-content{
+    --background : linear-gradient( rgb(129, 217, 236) 80%, white 30%);
 }
-// ion-row{
-//     color: white;
-//     font-size: 100%;
-//     padding: 6%;
-// }
+ion-card{
+    --background :white
+}
 
 ion-row.ipn ion-col{
     width:100%;    

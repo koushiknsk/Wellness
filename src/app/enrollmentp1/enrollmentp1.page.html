@@ -5,6 +5,13 @@
       SET-UP YOUR HEALTH PROFILE
     </ion-title>
   </ion-toolbar>
+  <ion-grid style="width:40%;" *ngIf="isOneVisible">
+      <ion-row style="height: 80%">
+        <ion-col>
+            <ion-img src="assets/images/Details.jpg" ></ion-img>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
 
   <ion-card *ngIf="isOneVisible">
     <!-- enrollement one data -->
@@ -205,7 +212,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item>
+      <ion-item lines=none>
         <ion-avatar slot="start">
           <img src="assets/images/exercise_two.png">
         </ion-avatar>
@@ -218,18 +225,16 @@
           <ion-select-option value="3">3 </ion-select-option>
         </ion-select>
       </ion-item>
-
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button type="submit" expand="block" (click)="oneBack()">Back</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button type="submit" expand="block" [routerLink]="['/home/home']">Next</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
     </ion-list>
   </ion-card>
+  <ion-grid *ngIf="isTwoVisible">
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block" (click)="oneBack()">Back</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button type="submit" expand="block" [routerLink]="['/home/home']">Next</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>
