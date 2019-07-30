@@ -9,35 +9,27 @@ export class Enrollmentp1Page implements OnInit {
 
   isOneVisible : Boolean = false
   isTwoVisible : Boolean = false
-  isThreeVisible : Boolean = false
-  isFourVisible : Boolean = false
-  isMCVisible : Boolean
+
 
   constructor() { 
-    this.isMCVisible  = true;
+    this.onEnter()
   }
 
 
   ngOnInit() {}
+  onEnter(){
+    this.isOneVisible=true;
+    this.isTwoVisible = false;
+  }
 
   enrollmentOne(){
-    this.isOneVisible = true;
-    this.isMCVisible = false;
+    this.isOneVisible = false;
+    this.isTwoVisible = true;
   }  
   
   oneBack(){
-    this.isOneVisible = false;
-    this.isMCVisible = true;
-  }
-
-  enrollmentTwo(){
-    this.isTwoVisible = true;
-    this.isMCVisible = false;
-  }  
-  
-  twoBack(){
+    this.isOneVisible = true;
     this.isTwoVisible = false;
-    this.isMCVisible = true;
   }
     
 }

@@ -1,156 +1,235 @@
-<body>
-  <div class="mainContent" *ngIf="isMCVisible">
-    <ion-card>
-      <ion-item lines="none">
-        <ion-icon slot="start" name="logo-buffer"></ion-icon>
-        <ion-label stacked (click)="enrollmentOne($event)">Enrollment P1</ion-label>
-        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+<ion-content>
+
+  <ion-toolbar style="opacity:0.5;">
+    <ion-title>
+      SET-UP YOUR HEALTH PROFILE
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-card *ngIf="isOneVisible">
+    <!-- enrollement one data -->
+    <ion-list-header>
+      BMI Details
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/Height.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Enter your Height</h2>
+      </ion-label>
+      <ion-select value="1.2" interface="popover">
+        <ion-select-option value="1.2">1.2 Meters</ion-select-option>
+        <ion-select-option value="1.4">1.4 Meters</ion-select-option>
+        <ion-select-option value="1.6">1.6 Meters</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/Weight.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Enter your Weight</h2>
+      </ion-label>
+      <ion-select value="80" interface="popover">
+        <ion-select-option value="80">80 Kilograms</ion-select-option>
+        <ion-select-option value="90">90 Kilograms</ion-select-option>
+        <ion-select-option value="100">100 Kilograms</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/Waist.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Enter your Waist</h2>
+      </ion-label>
+      <ion-select value="32" interface="popover">
+        <ion-select-option value="32">32 inches</ion-select-option>
+        <ion-select-option value="34">34 inches</ion-select-option>
+        <ion-select-option value="36">36 inches</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- enrollment two value -->
+    <ion-list-header>
+      Workout Structure
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/Exercise.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 text-wrap>How many days in a week do you exercise ?</h2>
+      </ion-label>
+      <ion-select value="3" interface="popover">
+        <ion-select-option value="3">3 days</ion-select-option>
+        <ion-select-option value="4">4 days</ion-select-option>
+        <ion-select-option value="5">5 days</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/Blood Pressure.png">
+      </ion-avatar>
+      <ion-grid>
+        <ion-row>
+      <ion-label>
+        <h2 text-wrap>Please tell us your blood pressure</h2>
+      </ion-label>
+      </ion-row>
+    
+        <ion-row>
+          <ion-col> <ion-input placeholder="Systolic (mmHG)"></ion-input></ion-col>
+          <ion-col><ion-input placeholder="Diastolic (mmHG)"></ion-input></ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    
+    </ion-item>
+
+    
+
+
+
+
+  </ion-card>
+  <ion-grid  *ngIf="isOneVisible">
+      <ion-row>
+
+        <ion-col>
+          <ion-button type="submit" expand="block" (click)="enrollmentOne()">Next</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+
+  <!-- card 2 -->
+  <ion-card *ngIf="isTwoVisible">
+    <ion-list>
+      <!-- enrollment page 3 details -->
+      <ion-list-header>
+        Other Habits
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Smoking.png">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>How many cigarettes do you smoke in a day ?</h2>
+        </ion-label>
+        <ion-select value="3" interface="popover">
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-icon slot="start" name="menu"></ion-icon>
-        <ion-label stacked (click)="enrollmentTwo($event)">Enrollment P2</ion-label>
-        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Alcohol.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>How many alcoholic drinks you consume per week ?</h2>
+        </ion-label>
+        <ion-select value="3" interface="popover">
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-icon slot="start" name="heart"></ion-icon>
-        <ion-label stacked (click)="enrollmentThree($event)">Enrollment P3</ion-label>
-        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Mood.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>Please tell us your mood in last month</h2>
+        </ion-label>
+        <ion-select value="verypositive" interface="popover">
+          <ion-select-option value="verypositive">Very Positive</ion-select-option>
+          <ion-select-option value="positive">Positive</ion-select-option>
+          <ion-select-option value="negative">Negative</ion-select-option>
+        </ion-select>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-icon slot="start" name="phone-portrait"></ion-icon>
-        <ion-label stacked (click)="enrollmentFour($event)">Enrollment P4</ion-label>
-        <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+      <!-- enrollement page 4 details -->
+      <ion-list-header>
+        Food Habits
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Whole Grains.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>Whole Grains</h2>
+        </ion-label>
+        <ion-select value="1" interface="popover">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2 </ion-select-option>
+          <ion-select-option value="3">3 </ion-select-option>
+        </ion-select>
       </ion-item>
 
-    </ion-card>
-  </div>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Cholesterol.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>Low Fat</h2>
+        </ion-label>
+        <ion-select value="2" interface="popover">
+          <ion-select-option value="1">1 </ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3 </ion-select-option>
+        </ion-select>
+      </ion-item>
 
-  <div class="enrollmentTwo" *ngIf="isOneVisible">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/Lean_Meat.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>Lean Meat</h2>
+        </ion-label>
+        <ion-select value="2" interface="popover">
+          <ion-select-option value="1">1 </ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3 </ion-select-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-card>
-      <ion-list>
-        <ion-list-header>
-          Recent Conversations
-        </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/images/exercise_two.png">
+        </ion-avatar>
+        <ion-label>
+          <h2 text-wrap>Salty Food</h2>
+        </ion-label>
+        <ion-select value="2" interface="popover">
+          <ion-select-option value="1">1 </ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3 </ion-select-option>
+        </ion-select>
+      </ion-item>
 
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="assets/images/Height.png">
-          </ion-avatar>
-          <ion-label>
-            <h2>Enter your Height</h2>
-          </ion-label>
-          <ion-select value="1.2" interface="popover">
-            <ion-select-option value="1.2">1.2 Meters</ion-select-option>
-            <ion-select-option value="1.4">1.4 Meters</ion-select-option>
-            <ion-select-option value="1.6">1.6 Meters</ion-select-option>
-          </ion-select>
-          <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
-        </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block" (click)="oneBack()">Back</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button type="submit" expand="block" [routerLink]="['/home/home']">Next</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="assets/images/Weight.jpg">
-          </ion-avatar>
-          <ion-label>
-            <h2>Enter your Weight</h2>
-          </ion-label>
-          <ion-select value="80" interface="popover">
-            <ion-select-option value="80">80 Kilograms</ion-select-option>
-            <ion-select-option value="90">90 Kilograms</ion-select-option>
-            <ion-select-option value="100">100 Kilograms</ion-select-option>
-          </ion-select>
-        </ion-item>
-
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="assets/images/Waist.jpg">
-          </ion-avatar>
-          <ion-label>
-            <h2>Enter your Waist</h2>
-          </ion-label>
-          <ion-select value="32" interface="popover">
-            <ion-select-option value="32">32 inches</ion-select-option>
-            <ion-select-option value="34">34 inches</ion-select-option>
-            <ion-select-option value="36">36 inches</ion-select-option>
-          </ion-select>
-        </ion-item>
-
-      </ion-list>
-    </ion-card>
-
-    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="oneBack($event)"
-      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
-  </div>
-
-  <div class="enrollmentThree" *ngIf="isTwoVisible">
-
-    <ion-card>
-      <ion-list>
-        <ion-list-header>
-          Recent Conversations
-        </ion-list-header>
-
-        <div class="ion-avatar">
-          <ion-avatar>
-            <img src="assets/images/exercise_two.png">
-          </ion-avatar>
-        </div>
-        <ion-item>
-          <ion-label>
-            <h6>How many days in a week do you exercise ?</h6>
-          </ion-label>
-          <ion-select value="3" interface="popover">
-            <ion-select-option value="3">3 days</ion-select-option>
-            <ion-select-option value="4">4 days</ion-select-option>
-            <ion-select-option value="5">5 days</ion-select-option>
-          </ion-select>
-          <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
-        </ion-item>
-
-        <div class="ion-avatar">
-            <ion-avatar>
-              <img src="assets/images/exercise_two.png">
-            </ion-avatar>
-          </div>
-          <ion-item>
-            <ion-label>
-              <h6>Please tell us your blood pressure</h6>
-            </ion-label>
-            <ion-input></ion-input>
-            <ion-select value="Systolic" interface="popover">              
-              <ion-select-option value="Systolic">Systolic (mmHG)</ion-select-option>
-              <ion-select-option value="Diastolic">Diastolic (mmHG)</ion-select-option>
-            </ion-select>
-            <!-- <ion-icon slot="end" name="ios-arrow-forward"></ion-icon> -->
-          </ion-item>
-
-
-
-
-
-      </ion-list>
-    </ion-card>
-
-    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="twoBack($event)"
-      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
-
-  </div>
-
-  <div class="enrollmentFour" *ngIf="isThreeVisible">
-
-    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="back($event)"
-      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
-
-  </div>
-
-  <div class="enrollmentOne" *ngIf="isFourVisible">
-
-    <ion-button expand="block" [routerLink]="['/enrollmentp1']" (click)="back($event)"
-      routerLinkActive="router-link-active" class="ion-align-self-center">back</ion-button>
-
-  </div>
-</body>
+    </ion-list>
+  </ion-card>
+</ion-content>
