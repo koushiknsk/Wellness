@@ -6,22 +6,40 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-img src="assets/images/bronze_level.png"></ion-img>
+            <ion-img src="assets/images/sponsorship.png" style="opacity: 0.4"></ion-img>
           </ion-col>
           <ion-col>
             <ion-img src="assets/images/silver_level.png"></ion-img>
           </ion-col>
           <ion-col>
-            <ion-img src="assets/images/gold_level.png"></ion-img>
+            <ion-img src="assets/images/gold_level.png" style="opacity: 0.4"></ion-img>
           </ion-col>
           <ion-col>
-            <ion-img src="assets/images/platinum_level.png"></ion-img>
+            <ion-img src="assets/images/platinum_level.png" style="opacity: 0.4"></ion-img>
           </ion-col>
         </ion-row>
       </ion-grid>
     </div>
 
-    <div class="progressBar"></div>
+    <div class="progressBar">
+          <circle-progress        
+          [percent] = 65
+          [outerStrokeColor]="'rgb(27, 60, 159)'"
+          [innerStrokeColor]="'rgb(129, 217, 236)'"
+          [titleFontSize]= "24"
+          [unitsFontSize]= "24"
+          [showSubtitle] = "true"
+          [animation]="true"
+          [animationDuration]="1000"
+          [startFromZero]="false"
+          [responsive]="true"
+          [lazy]="false"
+          subtitle="points achieved for current Level"
+          [subtitleFontSize]="10"
+          [subtitleFontWeight]=500
+        ></circle-progress>
+              
+    </div>
 
     <div class="mainCards">
       <ion-grid>
@@ -36,7 +54,7 @@
               </div>
               <ion-item color="none" lines="none">
                 <ion-label>
-                  <h2>Earn More Points</h2>
+                  <h2>Get More Points</h2>
                 </ion-label>
               </ion-item>
             </ion-card>
