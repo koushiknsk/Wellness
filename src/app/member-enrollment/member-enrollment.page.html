@@ -6,7 +6,16 @@
     </ion-title>
   </ion-toolbar>
   <!-- grid-->
-  
+
+  <div>
+    <ion-grid style="height: 40%;width:40%;padding-top: 8%">
+      <ion-row>
+        <ion-col>
+            <ion-img src="assets/images/Member.png"></ion-img>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  <ion-card> 
   <ion-grid style="height: 100%">
 
     <ion-row class="ipn">
@@ -45,21 +54,27 @@
     </ion-row>
     <ion-row>
         <ion-col class="ion-align-self-end">
+          <ion-item lines=none>
             <ion-select placeholder="GENDER"  value="female" interface="popover">
                 <ion-select-option value="male">Male</ion-select-option>
                 <ion-select-option value="female">Female</ion-select-option>
               </ion-select>
+              </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
           <ion-col class="ion-align-self-end">
-              <ion-input type="tel" placeholder="MOBILE NUMBER" value="+852 6689251"></ion-input>
+            <ion-item lines=none>  <ion-input type="tel" placeholder="MOBILE NUMBER" value="+852 6689251"></ion-input></ion-item>        
           </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col class="ion-align-self-end">
-                <ion-button expand="block" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active" class="ion-align-self-center">ENROLL</ion-button>
-            </ion-col>
-          </ion-row>
   </ion-grid>
+</ion-card>
+<ion-grid style="padding-top: 10%">
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" expand="block" [routerLink]="['/enrollmentp1']">Next</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
