@@ -6,7 +6,7 @@ ion-content.background {
   
   ion-img.capgemini {
     padding-top:10%;
-    height: 30%;
+    height: 60%;
   }
   
   ion-img.heartbeat {
@@ -31,6 +31,8 @@ ion-content.background {
   }
 
   ion-grid{
-    position: fixed;
+    text-align: center;
+    width:100%;
+    position: absolute;
     bottom: 5%;
   }
