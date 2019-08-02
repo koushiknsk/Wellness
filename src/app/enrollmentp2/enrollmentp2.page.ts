@@ -6,10 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./enrollmentp2.page.scss'],
 })
 export class Enrollmentp2Page implements OnInit {
+  isOneVisible : Boolean = false
+  isTwoVisible : Boolean = false
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor() { 
+    this.onEnter()
+  }
+
+
+  ngOnInit() {}
+  onEnter(){
+    this.isOneVisible=true;
+    this.isTwoVisible = false;
+  }
+
+  enrollmentOne(){
+    this.isOneVisible = false;
+    this.isTwoVisible = true;
+  }  
+  
+  oneBack(){
+    this.isOneVisible = true;
+    this.isTwoVisible = false;
   }
 
 }

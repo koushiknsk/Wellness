@@ -3,6 +3,11 @@
     height:100%;
 }
 
+div.status-grid ion-col{
+    display: flex;
+    justify-content: center;
+}
+
 div.status-grid{
     height: 20%;
     padding: 5px;
@@ -15,12 +20,10 @@ div.progressBar{
     padding: 10px;
 }
 div.progressBar ion-item{
-    margin: 10;
+    
     padding: 0;
     display: flex;
     justify-content: center;
-    box-align: inherit;
-    box-sizing: inherit;
 
 }
 div.mainCards{
@@ -59,6 +62,7 @@ ion-card.healthAssesment{
 ion-card.fitnessDevices{
     background-color: #fd3355;
 }
+
 div.ion-avatar{
     justify-content: center;    
     display: flex;
@@ -83,4 +87,8 @@ ion-row.nutricationCamLabel{
     font-size: 120%;
     font-weight: 200;
     padding-left: 5%
+}
+.pointsStatementCard ion-label{
+    display: flex;
+    justify-content: center;
 }
