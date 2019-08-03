@@ -1,56 +1,51 @@
-<ion-content>
-
-
-  <div class="firstHalf">
-      <img src="assets/images/cropped-capgemini_logo.png"/>
-
-    <!-- <button style="vertical-align: center">
-
-    </button> -->
-  </div>
-
-
-  <ion-card>
-
-    <ion-card-header>
-      <ion-card-title>LOGIN</ion-card-title>
-    </ion-card-header>
-
+<ion-content>  
+  <div class="background">
+    <ion-img src="../../assets/images/Background-2.png" style="width:100%; z-index: -10;"></ion-img>
     <ion-grid>
+        <ion-row style="padding-bottom:60%; color: white;">
+            <ion-col  class="ion-align-self-center">
+              <p>"Eccentric Quotation Goes here"</p>         
+            </ion-col>
+          </ion-row>
+        <ion-row style="padding-bottom:10%;">
+            <ion-col  class="ion-align-self-center">
+              <h2>Login</h2>         
+            </ion-col>
+          </ion-row>
       <ion-row>
         <ion-col class="ion-align-self-end">
           <ion-item class="username">
-            <ion-label color="dark" position="floating" value="Username">
+            <ion-label style="text-align: center" position="floating" value="Username">
               <ion-icon name="contact"></ion-icon>
               Username
             </ion-label>
-            <ion-input color="dark" type="text"></ion-input>
+            <ion-input style="text-align: center" type="text"></ion-input>
           </ion-item>
           <ion-item class="password">
-            <ion-label color="dark" position="floating">
+            <ion-label style="text-align: center" position="floating">
               <ion-icon name="key"></ion-icon>
               Password
             </ion-label>
-            <ion-input color="dark" type="password"></ion-input>
+            <ion-input style="text-align: center" type="password"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
 
       <ion-row>
-        <ion-col class="ion-align-self-center">
-          <ion-item class="TnC" lines="none ">
-            <ion-label color="dark">Please read and accept Terms & Conditions</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
+        <ion-col  class="ion-align-self-center">
+          <ion-item style="text-align: center" class="TnC" lines="none ">
+            <ion-label  color="white">Please read and accept Terms & Conditions</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
           </ion-item>          
         </ion-col>
       </ion-row>
-    </ion-grid>
-
-    <section>
-        <ion-button expand="block" shape="round" [routerLink]="['/member-enrollment']" routerLinkActive="router-link-active"
-        class="ion-align-self-center">Submit</ion-button>
-    </section>    
-    
-  </ion-card>
+      <ion-row>
+        <ion-col class="ion-align-self-center">
+          <ion-button expand="block" shape="round" [routerLink]="['/member-enrollment']" routerLinkActive="router-link-active"
+          class="ion-align-self-center">Submit</ion-button>         
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
+  </div>
 
 </ion-content>
