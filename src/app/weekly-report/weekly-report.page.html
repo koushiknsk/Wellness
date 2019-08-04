@@ -1,0 +1,54 @@
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+
+      <ion-tab-button tab='home' [routerLink]="['/weekly-report/home']" routerLinkActive="router-link-active">
+        <ion-icon name="Home"></ion-icon>
+        <ion-label >Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab='goals'>
+          <ion-icon name="radio-button-on"></ion-icon>
+          <ion-label>Targets</ion-label>
+        </ion-tab-button>
+
+      <ion-tab-button tab='rewards'>
+          <ion-icon name="trophy"></ion-icon>
+          <ion-label>Rewards</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+<div class= "Weekly">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img src="assets/images/Target (Goals).png"  style="height: 250px; "></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-button expand="block" color="medium" size="large">Weekly Activity</ion-button>
+    <ion-row>
+        <canvas id="barChart"></canvas>
+    </ion-row>
+    <ion-row>
+    <br>
+    </ion-row>
+    <ion-row>
+    <ion-col col-xl-8 padding> <!--align-self-start-->
+        <ion-button  size= small style="width: 100px">Exercise </ion-button>
+        <ion-button  size= small style="width: 100px" >Sleep </ion-button>
+        <ion-button  size= small style="width: 100px ">Nutrition </ion-button>
+    </ion-col>
+    <!-- <ion-col align-self-center>
+        <ion-button  size= small style="width: 110px" >Sleep Point</ion-button>
+    </ion-col>
+    <ion-col align-self-end>
+        <ion-button  size= small style="width: 120px">Nutrition Point</ion-button>
+    </ion-col> -->
+   
+  </ion-row>
+   
+  </ion-grid>
+</div>
+
+
