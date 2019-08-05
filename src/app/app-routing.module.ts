@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'main-landing-page', loadChildren: './main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
   { path: 'goals-tab', loadChildren: './goals-tab/goals-tab.module#GoalsTabPageModule' },
   { path: 'member-enrollment', loadChildren: './member-enrollment/member-enrollment.module#MemberEnrollmentPageModule' },
-  { path: 'rewards-tab', loadChildren: './rewards-tab/rewards-tab.module#RewardsTabPageModule' },
+  { path: 'rewards-tab', loadChildren: './rewards-tab/rewards-tab.module#RewardsTabPageModule' },  { path: 'weekly-report', loadChildren: './weekly-report/weekly-report.module#WeeklyReportPageModule' },
+
 
 
 ];
