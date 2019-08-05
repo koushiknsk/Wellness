@@ -1,86 +1,199 @@
-<ion-content class="background">
-
-  <ion-toolbar style="opacity:0.5;">
-    <ion-title>
-      MEMBER ENROLLMENT
-    </ion-title>
-  </ion-toolbar>
-  <!-- grid-->
-
-  <div>
-    <ion-grid style="height: 40%;width:40%;padding-top: 8%">
+<ion-content style="size: 70%">
+    <ion-grid>
       <ion-row>
-        <ion-col>
-          <ion-img src="assets/images/Member.png"></ion-img>
+        <ion-img style="padding-left: 177px;
+            width: auto;
+            height: 30px;" src="assets/images/werve_screen_logo.png"></ion-img>
+      </ion-row>
+  
+      <ion-row style="height: 200px;padding-bottom: 0%">
+        <ion-img src="assets/images/member_enrollment.jpg"></ion-img>
+      </ion-row>
+  
+      <ion-row style="padding-bottom: 0%">
+        <ion-col style="padding-bottom: 0%">
+          <ion-img style="width: 90%;padding-left: 7%;" src="assets/images/member_enrollment_logo.png"></ion-img>
         </ion-col>
       </ion-row>
-    </ion-grid>
-    <ion-card>
-      <ion-grid style="height: 100%">
-
-        <ion-row class="ipn">
-
-          <ion-col id="label" class="ion-align-self-end">
-            <ion-item color="transparent" lines="none">
-              <ion-input id="input" readonly>Insurance Policy Number</ion-input>
-            </ion-item>
-          </ion-col>
-
-          <ion-col class="ion-align-self-end">
-            <ion-item color="transparent" lines="none">
-              <ion-label slot="end">01164137</ion-label>
-            </ion-item>
-          </ion-col>
-
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-item color="transparent" lines="none">
-              <ion-label>Date Of Birth</ion-label>
-              <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-            <ion-item lines=none>
-              <ion-label>Gender</ion-label>
-              <ion-select value="female" interface="popover">
-                <ion-select-option value="male">Male</ion-select-option>
-                <ion-select-option value="female">Female</ion-select-option>
-              </ion-select>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-
-          <ion-col>
-            <ion-item color="transparent" lines="none">
-             <ion-label style="padding-right: 30%">Email Id</ion-label>
-              <ion-input type="email"  value="Cathy.muller@gmail.com" style="width: 100%"> </ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-item lines=none>
-                <ion-label >Phone Number</ion-label>
-              <ion-input type="tel"  value="+852 6689251" slot="end"></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-    <ion-grid style="padding-top: 10%">
       <ion-row>
-        <ion-col>
-          <ion-button type="submit" expand="block" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active">Next</ion-button>
+  
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="box-shadow: none;margin-top: 3%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-img slot="start" style="width: 10%" src="assets/images/Insurance_policy_number.png">
+              </ion-img>
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row>
+                  <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      INSURANCE POLICY NUMBER</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+  
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input value="116235"></ion-input>
+                    </ion-card>
+                  </ion-col>
+  
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="box-shadow: none;margin-top: 0%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-img slot="start" style="width: 10%" src="assets/images/dob.png">
+              </ion-img>
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row style="margin-bottom: 0%;margin-top: 0%;">
+                  <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+  
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      DATE OF BIRTH</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+  
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                    </ion-card>
+                  </ion-col>
+  
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="box-shadow: none;margin-top: 0%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-img slot="start" style="width: 10%" src="assets/images/mail.png">
+              </ion-img>
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row style="margin-bottom: 0%;margin-top: 0%;">
+                  <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+  
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      EMAIL</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+  
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input type="email" value="Cathy.muller@gmail.com" style="width: 100%;padding-left: 1%">
+                      </ion-input>
+                    </ion-card>
+                  </ion-col>
+  
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="box-shadow: none;margin-top: 0%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-img slot="start" style="width: 10%" src="assets/images/gender.png">
+              </ion-img>
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row style="margin-bottom: 0%;margin-top: 0%;">
+                  <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+  
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      GENDER</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+  
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-select value="female" interface="popover">
+                        <ion-select-option value="male">Male</ion-select-option>
+                        <ion-select-option value="female">Female</ion-select-option>
+                      </ion-select>
+                    </ion-card>
+                  </ion-col>
+  
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  
+  
+      <ion-row>
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="box-shadow: none;margin-top: 0%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-img slot="start" style="width: 10%" src="assets/images/mobile.png">
+              </ion-img>
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row style="margin-bottom: 0%;margin-top: 0%;">
+                  <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+  
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      MOBILE</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+  
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input type="tel" style="padding-bottom: 5%;padding-top: 5%;" value="+852 6689251" slot="end">
+                      </ion-input>
+                    </ion-card>
+                  </ion-col>
+  
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" [routerLink]="['/login']" routerLinkActive="router-link-active"
+            src="assets/images/backbutton.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active"
+            src="assets/images/forwardbutton.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
     </ion-grid>
-  </div>
-</ion-content>
+  
+  
+  
+  </ion-content>

@@ -1,57 +1,138 @@
 <ion-content class="background">
-
-    <ion-toolbar style="opacity:0.5;">
-      <ion-title>
-        SET-UP YOUR HEALTH PROFILE
-      </ion-title>
-    </ion-toolbar>
-  
-  
-    <ion-grid style="height: 100%">
-  
-      <!--Cigarettes Grid Starts Here-->
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <p>How many ciragettes do you smoke in a day ?</p>
-          <ion-select value="3" interface="popover">
-            <ion-select-option value="3">3</ion-select-option>
-            <ion-select-option value="4">4</ion-select-option>
-            <ion-select-option value="5">5</ion-select-option>
-          </ion-select>
-        </ion-col>
-      </ion-row>
-  
-      <!--Drink Grid Starts Here-->
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-            <p>How many alcoholic drinks you consume per week ?</p>
-            <ion-select value="3" interface="popover">
-                <ion-select-option value="3">3</ion-select-option>
-                <ion-select-option value="4">4</ion-select-option>
-                <ion-select-option value="5">5</ion-select-option>
+    <ion-row style="height: 2px;padding-top: inherit;">
+            <ion-img style="padding-left: 145px;
+                width: auto;
+                height: 30px;" src="assets/images/werve_screen_logo.png"></ion-img>
+          </ion-row>
+          <ion-row style="padding-top: 1px;padding-bottom: 0px;height: 170px">
+            <ion-img src="assets/images/HealthHabits.jpg"></ion-img>
+          </ion-row>
+          <ion-grid style="padding-top: 0px;padding-bottom: 0px">
+          <ion-list style="padding-top: 0px;padding-bottom: 0px">
+            <!-- enrollment page 3 details -->
+            <ion-list-header style="padding-top: 0px;padding-bottom: 0px">
+              <h5 style="padding-top: 0px;margin-top: 2px;margin-bottom: 0px">Lifestyle Habits</h5>
+            </ion-list-header>
+            <ion-item style="padding-top: 0px;padding-bottom: 0px;margin: none;"lines="none">
+                <img src="assets/images/Cigarettes.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-top: 0px;padding-bottom: 0px;padding-left: 20px">
+                <p text-wrap style="size: 3px;font-weight: 500">How many cigarettes do you smoke in a day ?</p>
+              </ion-label>
+              <ion-select value="1" interface="popover">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3 or more">3 or more</ion-select-option>
               </ion-select>
-        </ion-col>
-      </ion-row>
+            </ion-item>
+      
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/Alcohol.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">How many alcoholic drinks you consume per week?</p>
+              </ion-label>
+              <ion-select value="1" interface="popover">
+                  <ion-select-option value="1">1</ion-select-option>
+                  <ion-select-option value="2">2</ion-select-option>
+                  <ion-select-option value="3 or more">3 or more</ion-select-option>
+                </ion-select>
+            </ion-item>
+      
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/ExerciseLogo.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">How you have been feeling lately? </p>
+              </ion-label>
+              <ion-select value="1" interface="popover">
+                  <ion-select-option value="1">1</ion-select-option>
+                  <ion-select-option value="2">2</ion-select-option>
+                  <ion-select-option value="3 or more">3 or more</ion-select-option>
+                </ion-select>
+            </ion-item>
+      
+            <!-- enrollement page 4 details -->
+            <ion-list-header>
+                <h5 style="padding-top: 0px;margin-top: 2px;margin-bottom: 0px"> Weekly Food Habits</h5>
+            </ion-list-header>
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+              <img src="assets/images/Wholegrains.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">Wholegrains</p>
+              </ion-label>
+              <ion-select value="Daily" interface="popover">
+                <ion-select-option value="Daily">Daily</ion-select-option>
+                <ion-select-option value="2-3 times a week">2-3 times a week</ion-select-option>
+                <ion-select-option value="More than 3 times">More than 3 times</ion-select-option>
+              </ion-select>
+            </ion-item>
+      
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/Dairy.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">Dairy</p>
+              </ion-label>
+              <ion-select value="Daily" interface="popover">
+                  <ion-select-option value="Daily">Daily</ion-select-option>
+                  <ion-select-option value="2-3 times a week">2-3 times a week</ion-select-option>
+                  <ion-select-option value="More than 3 times">More than 3 times</ion-select-option>
+              </ion-select>
+            </ion-item>
+      
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/Fruits.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">Fruits</p>
+              </ion-label>
+              <ion-select value="Daily" interface="popover">
+                  <ion-select-option value="Daily">Daily</ion-select-option>
+                  <ion-select-option value="2-3 times a week">2-3 times a week</ion-select-option>
+                  <ion-select-option value="More than 3 times">More than 3 times</ion-select-option>
+              </ion-select>
+            </ion-item>
+      
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/Vegetables.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">Vegetables</p>
+              </ion-label>
+              <ion-select value="Daily" interface="popover">
+                  <ion-select-option value="Daily">Daily</ion-select-option>
+                  <ion-select-option value="2-3 times a week">2-3 times a week</ion-select-option>
+                  <ion-select-option value="More than 3 times">More than 3 times</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item style="padding-top: 0px;padding-bottom: 0px" lines="none">
+                <img src="assets/images/Meat.png" style="height: 25px; width: 30px;">
+              <ion-label style="padding-left: 20px">
+                  <p text-wrap style="size: 3px;font-weight: 500">Meat & Poultry</p>
+              </ion-label>
+              <ion-select value="Daily" interface="popover">
+                  <ion-select-option value="Daily">Daily</ion-select-option>
+                  <ion-select-option value="2-3 times a week">2-3 times a week</ion-select-option>
+                  <ion-select-option value="More than 3 times">More than 3 times</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+      </ion-grid>
+      <ion-grid style="padding-top: 0px;padding-bottom: 0px;">
+          <ion-row style="height: 50px;padding-top: 0px;padding-bottom: 0px;">
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 75%;" [routerLink]="['/member-enrollmentp1']" routerLinkActive="router-link-active"
+                src="assets/images/backbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 75%;" [routerLink]="['/home/home']" routerLinkActive="router-link-active"
+                src="assets/images/forwardbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+    
+    </ion-content>
   
-      <!--Mood Grid Starts Here-->
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <p>Please tell us your mood in last month</p>
-          <ion-select value="verypositive" interface="popover">
-            <ion-select-option value="verypositive">Very Positive</ion-select-option>
-            <ion-select-option value="positive">Positive</ion-select-option>
-            <ion-select-option value="negative">Negative</ion-select-option>
-          </ion-select>
-        </ion-col>
-      </ion-row>
   
-      <!-- Next Button-->
-      <ion-row>
-        <ion-col class="ion-align-self-end">
-          <ion-button expand="block" [routerLink]="['/enrollmentp4']" routerLinkActive="router-link-active" class="ion-align-self-center">NEXT</ion-button>
-        </ion-col>
-      </ion-row>
-  
-    </ion-grid>
-  
-  </ion-content>

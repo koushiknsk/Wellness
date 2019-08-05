@@ -1,249 +1,230 @@
-<ion-content>
-
-  <ion-toolbar style="opacity:0.5;">
-    <ion-title>
-      SET-UP YOUR HEALTH PROFILE
-    </ion-title>
-  </ion-toolbar>
-  <ion-grid style="width:40%;" *ngIf="isOneVisible">
-    <ion-row style="height: 80%">
-      <ion-col>
-        <ion-img src="assets/images/Details.jpg"></ion-img>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-card *ngIf="isOneVisible">
-    <!-- enrollement one data -->
-    <ion-list-header>
-      BMI Details
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/Height.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Enter your Height</h2>
-      </ion-label>
-      <ion-select value="160" interface="popover">
-        <ion-select-option value="160">160 cms</ion-select-option>
-        <ion-select-option value="165">165 cms</ion-select-option>
-        <ion-select-option value="170">170 cms</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/Weight.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h2>Enter your Weight</h2>
-      </ion-label>
-      <ion-select value="80" interface="popover">
-        <ion-select-option value="80">80 Kgs</ion-select-option>
-        <ion-select-option value="90">90 Kgs</ion-select-option>
-        <ion-select-option value="100">100 Kgs</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/Waist.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h2>Enter your Waist</h2>
-      </ion-label>
-      <ion-select value="32" interface="popover">
-        <ion-select-option value="32">32 inches</ion-select-option>
-        <ion-select-option value="34">34 inches</ion-select-option>
-        <ion-select-option value="36">36 inches</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <!-- enrollment two value -->
-    <ion-list-header>
-      Workout Structure
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/Exercise.png">
-      </ion-avatar>
-      <ion-label>
-        <h2 text-wrap>How many days in a week do you exercise ?</h2>
-      </ion-label>
-      <ion-select value="3" interface="popover">
-        <ion-select-option value="3">3 days</ion-select-option>
-        <ion-select-option value="4">4 days</ion-select-option>
-        <ion-select-option value="5">5 days</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/Blood Pressure.png">
-      </ion-avatar>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label>
-              <h2 text-wrap>Please tell us last blood pressure</h2>
-            </ion-label>
-          </ion-col>
-        
-
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-            <ion-input placeholder="Systolic (mmHG)"></ion-input>
-          </ion-col>
-   
-          <ion-col>
-            <ion-input placeholder="Diastolic (mmHG)"></ion-input>
-          </ion-col>
-        </ion-row>
-
+<ion-content style="size: 70%">
+    <ion-grid style="margin-bottom: 2px">
+      <ion-row>
+        <ion-img style="padding-left: 177px;
+            width: auto;
+            height: 30px;" src="assets/images/werve_screen_logo.png"></ion-img>
+      </ion-row>
+  
+      <ion-row style="height: 5px;padding-bottom: 0%">
+        <ion-img src="assets/images/setuphealthprofilebackground.png"></ion-img>
+      </ion-row>
+  
+  
+  
+      <ion-row style="padding-bottom: 0%">
+        <ion-col style="padding-bottom: 0%">
+          <ion-img style="width: 90%;padding-left: 7%;" src="assets/images/setHealthValue.png"></ion-img>
+        </ion-col>
+      </ion-row>
+  
+  
+  
+  
+      <ion-row>
+        <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+          <ion-card style="margin-top: 3%;margin-bottom: 0%;background: white">
+  
+            <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+              <ion-row>
+                <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+                  <p style="padding-left: 20px;padding-top: 0%;padding-bottom: 0%;">
+                    <ion-img style="width: 50px;height: 40px; padding-top: 3px;" src="assets/images/Height.png">
+                    </ion-img>
+                  </p>
+                  <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
+                    Height</p>
+                  <ion-select value="160" interface="popover">
+                    <ion-select-option value="160">160 cms</ion-select-option>
+                    <ion-select-option value="165">165 cms</ion-select-option>
+                    <ion-select-option value="170">170 cms</ion-select-option>
+                  </ion-select>
+  
+                </ion-col>
+  
+  
+                <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+                  <p style="padding-left: 20px;padding-top: 0%;padding-bottom: 0%;">
+                    <ion-img style="width: 50px;height: 40px; padding-top: 3px;" src="assets/images/weight.png">
+                    </ion-img>
+                  </p>
+                  <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
+                    Weight</p>
+                  <ion-select value="80" interface="popover">
+                    <ion-select-option value="80">80 Kgs</ion-select-option>
+                    <ion-select-option value="90">90 Kgs</ion-select-option>
+                    <ion-select-option value="100">100 Kgs</ion-select-option>
+                  </ion-select>
+  
+                </ion-col>
+  
+                <ion-col style="padding-bottom: 0%;padding-top: 0%;">
+                  <p style="padding-left: 20px;padding-top: 0%;padding-bottom: 0%;">
+                    <ion-img style="width: 50px;height: 40px; padding-top: 3px;" src="assets/images/waist.png"> </ion-img>
+                  </p>
+                  <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
+                    Waist</p>
+                  <ion-select value="32" interface="popover">
+                    <ion-select-option value="32">32 inches</ion-select-option>
+                    <ion-select-option value="34">34 inches</ion-select-option>
+                    <ion-select-option value="36">36 inches</ion-select-option>
+                  </ion-select>
+                </ion-col>
+  
+              </ion-row>
+  
+            </ion-grid>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+    <ion-card style="box-shadow: none;padding-bottom: 0%;padding-top: 0%;margin-bottom: 2px;margin-top: 2px">
+      <ion-grid style="padding-bottom: 0%;padding-top: 0%">
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide>
+            <ion-img src="assets/images/profile5.jpg"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/images/profile4.jpg"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/images/profile2.jpg"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-label style="color: white">Slide Final</ion-label>
+          </ion-slide>
+  
+        </ion-slides>
       </ion-grid>
-
-
-    </ion-item>
-
-
-
-
-
-
-  </ion-card>
-  <ion-grid *ngIf="isOneVisible">
-    <ion-row>
-
-      <ion-col>
-        <ion-button type="submit" expand="block" (click)="enrollmentOne()">Next</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
-
-
-  <!-- card 2 -->
-  <ion-card *ngIf="isTwoVisible">
-    <ion-list>
-      <!-- enrollment page 3 details -->
-      <ion-list-header>
-        Other Habits
-      </ion-list-header>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Smoking.png">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>How many cigarettes do you smoke in a day ?</h2>
-        </ion-label>
-        <ion-select value="3" interface="popover">
-          <ion-select-option value="3">3</ion-select-option>
-          <ion-select-option value="4">4</ion-select-option>
-          <ion-select-option value="5">5</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Alcohol.jpg">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>How many alcoholic drinks you consume per week ?</h2>
-        </ion-label>
-        <ion-select value="3" interface="popover">
-          <ion-select-option value="3">3</ion-select-option>
-          <ion-select-option value="4">4</ion-select-option>
-          <ion-select-option value="5">5</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Mood.jpg">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>How you have been feeling lately? </h2>
-        </ion-label>
-        <ion-select value="verypositive" interface="popover">
-          <ion-select-option value="verypositive">Very Positive</ion-select-option>
-          <ion-select-option value="positive">Positive</ion-select-option>
-          <ion-select-option value="negative">Negative</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <!-- enrollement page 4 details -->
-      <ion-list-header>
-        Food Habits
-      </ion-list-header>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Whole Grains.jpg">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>Whole Grains</h2>
-        </ion-label>
-        <ion-select value="1" interface="popover">
-          <ion-select-option value="1">1</ion-select-option>
-          <ion-select-option value="2">2 </ion-select-option>
-          <ion-select-option value="3">3 </ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Cholesterol.jpg">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>Low Fat</h2>
-        </ion-label>
-        <ion-select value="2" interface="popover">
-          <ion-select-option value="1">1 </ion-select-option>
-          <ion-select-option value="2">2</ion-select-option>
-          <ion-select-option value="3">3 </ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="assets/images/Lean_Meat.jpg">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>Lean Meat</h2>
-        </ion-label>
-        <ion-select value="2" interface="popover">
-          <ion-select-option value="1">1 </ion-select-option>
-          <ion-select-option value="2">2</ion-select-option>
-          <ion-select-option value="3">3 </ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item lines=none>
-        <ion-avatar slot="start">
-          <img src="assets/images/exercise_two.png">
-        </ion-avatar>
-        <ion-label>
-          <h2 text-wrap>Salty Food</h2>
-        </ion-label>
-        <ion-select value="2" interface="popover">
-          <ion-select-option value="1">1 </ion-select-option>
-          <ion-select-option value="2">2</ion-select-option>
-          <ion-select-option value="3">3 </ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-  </ion-card>
-  <ion-grid *ngIf="isTwoVisible">
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" expand="block" (click)="oneBack()">Back</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button type="submit" expand="block" [routerLink]="['/home/home']">Next</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+      <hr />
+    </ion-card>
+  
+    <ion-grid style="padding-bottom: 0%;padding-top: 0%">
+      <ion-row style="padding-bottom: 0%;padding-top: 0%">
+  
+        <ion-col style="padding-bottom: 0%;padding-top: 0%">
+          <ion-card style="box-shadow: none;margin-top: 3%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-avatar slot="start">
+                <img src="assets/images/BloodGroup.jpg">
+              </ion-avatar>
+  
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row>
+                  <ion-col>
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      Blood Group</p>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card style="box-shadow: none">
+                      <ion-input readonly></ion-input>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input></ion-input>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+  
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+  
+          <ion-card style="box-shadow: none;margin-top: 3%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-avatar slot="start">
+                <img src="assets/images/BloodPressure.jpg">
+              </ion-avatar>
+  
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row>
+                  <ion-col>
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500;">
+                      Blood Pressure</p>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-select value="unit" interface="popover">
+                        <ion-select-option value="unit" readonly>unit()</ion-select-option>
+                        <ion-select-option value="systolic">Systolic (mmHG)</ion-select-option>
+                        <ion-select-option value="Diastolic">Diastolic (mmHG)</ion-select-option>
+                      </ion-select>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input></ion-input>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+          <ion-card style="box-shadow: none;margin-top: 3%;margin-bottom: 0%">
+            <ion-item lines=none>
+              <ion-avatar slot="start">
+                <img src="assets/images/BloodSugar.jpg">
+              </ion-avatar>
+  
+              <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
+                <ion-row>
+                  <ion-col>
+                    <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500">
+                      Blood Sugar</p>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-select value="unit" interface="popover">
+                        <ion-select-option value="unit" readonly>unit()</ion-select-option>
+                        <ion-select-option value="mmol">mmol/Hg</ion-select-option>
+                        <ion-select-option value="mg">mg/dL</ion-select-option>
+                      </ion-select>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                    <ion-card>
+                      <ion-input></ion-input>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+  
+              </ion-grid>
+            </ion-item>
+  
+          </ion-card>
+  
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" [routerLink]="['/member-enrollment']" routerLinkActive="router-link-active"
+            src="assets/images/backbutton.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" [routerLink]="['/enrollmentp3']" routerLinkActive="router-link-active"
+            src="assets/images/forwardbutton.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+  
+  </ion-content>

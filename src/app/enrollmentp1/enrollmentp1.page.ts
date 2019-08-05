@@ -7,29 +7,17 @@ import { Component, OnInit} from '@angular/core';
 })
 export class Enrollmentp1Page implements OnInit {
 
-  isOneVisible : Boolean = false
-  isTwoVisible : Boolean = false
-
+  public slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
   constructor() { 
-    this.onEnter()
+  
   }
 
 
   ngOnInit() {}
-  onEnter(){
-    this.isOneVisible=true;
-    this.isTwoVisible = false;
-  }
-
-  enrollmentOne(){
-    this.isOneVisible = false;
-    this.isTwoVisible = true;
-  }  
-  
-  oneBack(){
-    this.isOneVisible = true;
-    this.isTwoVisible = false;
-  }
+ 
     
 }
