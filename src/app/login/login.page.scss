@@ -1,59 +1,53 @@
 ion-content{
-    --background : linear-gradient( rgb(64, 185, 213) 50%, white 50%);
+    --background: transparent;
 }
 
-div.firstHalf{
-    height: 30%;
-    padding-left: 42%;
-    padding-right: 39%;
-    padding-top: 20%;
-
-    // height: 30%;
-    // //background-color: rgb(64, 98, 201);    
-    // //padding-top: 20%;
-    // padding-left: 40%;
-    // padding-right: 30%;
-
-}
-
-div.firstHalf img{
-    max-width: 100%;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10%;
-}
-
-ion-card{
-    background-color: #fff;
-    height: 60%;      
-}
-
-ion-card-header{
-    height: 5%;
-    padding-left: 40%;
-    
-}
-
-ion-card-title{
-    font-size:  20px;
+.background{
+    height: 43%;
+    background: url('../../assets/images/run.png') center;
+    background-size: cover;
 }
 
 ion-item.username,ion-item.password{
-    font-size:  14px;
-    margin: 0 auto;
+    font-family: Verdana, Geneva, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 20px; 
+      //color: aqua;a
+      color: white;
+    --background: transparent;
 }
 
 ion-item.TnC{
-    font-size: 10px;
+    font-family: Verdana, Geneva, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 20px; 
+      //color: aqua;a
+      color: white;
     --background: transparant;    
 }
 
 ion-button{
-    margin-left: 27%;
-    margin-right: 25%;
-    //margin-top: 5%;
-}
+    font-family: Verdana, Geneva, sans-serif; font-size: 20px;  font-weight: bold;
+      color: white;      
+      width: 80%;
+      margin: auto auto;  
+  }
 
 ion-checkbox{    
     margin-right: 2%;
+}
+ion-grid{
+    --background: transparent;
+    text-align: center;
+    width:100%;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  h2{
+    font-family: Verdana, Geneva, sans-serif; font-size: 35px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 20px; 
+    //color: aqua;a
+    color: white;
+}
+
+p{
+    font-family: Verdana, Geneva, sans-serif; font-size: 20px; font-style: italic ; font-variant: normal ; font-weight: 700; line-height: 20px; 
+    //color: aqua;a
+    color: white;
 }
