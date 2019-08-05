@@ -15,6 +15,7 @@ export class MainLandingPagePage implements OnInit {
   isNutritionAssesDetailsPageVisible: boolean = false;
   isNutritionCamPageVisible: boolean = false;
   isFitnessDevicesPageVisible: boolean = false;
+  isPointsStatementPageVisible: boolean =false;
 
 
   constructor() {
@@ -31,6 +32,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isEarnMorePointsCardVisible = true;
   }
   setNutritionPageCardVisibility() {
@@ -40,7 +42,18 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isNutritionAssesmentCardVisible = true;
+  }
+  nutritionPageCardBackBtn() {
+    this.isMainContentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isPointsStatementPageVisible=false;
+    this.isEarnMorePointsCardVisible = true;
+    this.isNutritionAssesmentCardVisible = false;
   }
   setSleepPageCardVisibility() {
     this.isMainContentCardVisible = false;
@@ -48,6 +61,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = true;
   }
@@ -56,6 +70,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
     this.isNutritionAssesDetailsPageVisible = true;
@@ -66,18 +81,59 @@ export class MainLandingPagePage implements OnInit {
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = true;
+  }
+  nutritionCamPageBackBtn() {
+    this.isMainContentCardVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = true;
+    this.isSleepTrackingCardVisible = false;
+    this.isPointsStatementPageVisible=false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
   }
   setFitnessPageVisibility() {
     this.isMainContentCardVisible = false;
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
+    this.isPointsStatementPageVisible=false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = true;
-
+  }
+  nutritionCamCardBackBtn(){
+    this.isMainContentCardVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isPointsStatementPageVisible=false;
+    this.isNutritionAssesDetailsPageVisible = true;
+    this.isNutritionCamPageVisible = false;
+  }
+  earnMorePointsCardBackBtn(){
+    this.isMainContentCardVisible = true;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isPointsStatementPageVisible=false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+  }
+  pointsEarnedCardVisibility(){
+    this.isMainContentCardVisible = false;
+    this.isFitnessDevicesPageVisible = false;
+    this.isEarnMorePointsCardVisible = false;
+    this.isNutritionAssesmentCardVisible = false;
+    this.isSleepTrackingCardVisible = false;
+    this.isNutritionAssesDetailsPageVisible = false;
+    this.isNutritionCamPageVisible = false;
+    this.isPointsStatementPageVisible=true;
   }
 
 }
