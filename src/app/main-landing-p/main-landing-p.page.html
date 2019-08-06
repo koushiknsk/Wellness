@@ -2,7 +2,7 @@
 
   <!-- ProgressiveBar grid starts here -->
   <div class="mainContainer">
-    <div class="status-grid">
+    <div class="status-grid" *ngIf="isMainContentCardVisible">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -142,145 +142,235 @@
     </div>
 
     <!-- EarnMorePoints -->
-    <ion-card *ngIf="isEarnMorePointsCardVisible">
+    <div *ngIf="isEarnMorePointsCardVisible">
+      <ion-item>
+        <ion-img src="assets/images/medalsheet.png"></ion-img>
+      </ion-item>
+    
 
-      <div>
-          <ion-grid>
-              <ion-row>
-                <ion-img src="assets/images/EarnMorePoints.jpg"></ion-img>
-              </ion-row>
-              </ion-grid>
-        <p>
-            Earn more points and get rewarded with daily activities.
-        </p>
-      </div>
-      <div>
-        <ion-item lines="none">
-          <ion-icon slot="start" name="alarm"></ion-icon>
-          <ion-label stacked (click)="setSleepPageCardVisibility($event)">Sleep Tracking</ion-label>
-          <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-icon slot="start" name="pizza"></ion-icon>
-          <ion-label stacked (click)="setNutritionPageCardVisibility($event)">Nutrition Assesment</ion-label>
-          <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
-        </ion-item>
-      </div>
-      <ion-button expand="block" style="padding-left: 5px;padding-right: 5px" class="ion-align-self-center" (click)="earnMorePointsCardBackBtn()">back</ion-button>
-    </ion-card>
-
-    <!-- EarnMorePoint - Sleep Tracking -->
-    <ion-card *ngIf="isSleepTrackingCardVisible">
-
-      <div>
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+            <p text-wrap>
+                Below are all ways you can earn points. Points to stay healthy and active. The more you earn, the higher your ststus and greater the rewards
+                </p>
+        </ion-row>
+        <ion-row>
+          <ion-img src="assets/images/SleepTracking.png" stacked (click)="setSleepPageCardVisibility($event)"></ion-img>
+</ion-row>
+<ion-row>
+    <ion-img src="assets/images/NutritionAssessment.png" stacked (click)="setNutritionPageCardVisibility($event)"></ion-img>
+</ion-row>
+</ion-grid>
+</ion-card>
+      <div style="padding-top: 12%">
         <ion-grid>
           <ion-row>
-            <ion-img src="assets/images/sleepingboy.jpg"></ion-img>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" stacked (click)="earnMorePointsCardBackBtn()"
+                src="assets/images/backbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/forwardbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
           </ion-row>
-          </ion-grid>
-        <p>
-            Track your sleep time with your fitness linked (compatible with Garmin, Fitbit, Moves or Polar fitness tracker). Get rewarded having a good night sleep of 7-9 hours daily. 
-        </p>
-      </div>
-      <div>
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-button expand="block" class="ion-align-self-center">Link Your Device Here</ion-button>
-            <ion-button expand="block" class="ion-align-self-center" (click)="nutritionPageCardBackBtn()">back</ion-button>
-          </ion-col>
-        </ion-row>
-        
+        </ion-grid>
       </div>
 
-    </ion-card>
+    </div>
+
+    <!-- EarnMorePoint - Sleep Tracking -->
+    <div *ngIf="isSleepTrackingCardVisible">
+      <ion-item>
+        <ion-img src="assets/images/medalsheet.png"></ion-img>
+      </ion-item>
+
+      <ion-card>
+
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-img src="assets/images/sleeptrackingpage.png"></ion-img>
+            </ion-row>
+          </ion-grid>
+          <p>
+            Track your sleep time with your fitness linked (compatible with Garmin, Fitbit, Moves or Polar fitness
+            tracker). Get rewarded having a good night sleep of 7-9 hours daily.
+          </p>
+        </div>
+        <div>
+          <ion-row>
+            <ion-col class="ion-align-self-end">
+              <ion-button expand="block" class="ion-align-self-center">Link Your Device Here</ion-button>
+
+            </ion-col>
+          </ion-row>
+
+        </div>
+
+      </ion-card>
+      <div style="padding-top: 110px">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" stacked (click)="nutritionPageCardBackBtn()"
+                src="assets/images/backbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/forwardbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+
+    </div>
 
     <!-- EarnMorePoint - Nutrition Assesment_1 -->
-    <ion-card *ngIf="isNutritionAssesmentCardVisible">
+    <div *ngIf="isNutritionAssesmentCardVisible">
+      <ion-item>
+        <ion-img src="assets/images/medalsheet.png"></ion-img>
+      </ion-item>
+      <ion-card style="padding-top: 40px">
 
-      <div>
-          <ion-grid >
-              <ion-row>
-                <ion-img src="assets/images/nutritionPageFill.jpg"></ion-img>
-              </ion-row>
-              </ion-grid>
-        <p>
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-img src="assets/images/nutritionPageFill.jpg"></ion-img>
+            </ion-row>
+          </ion-grid>
+          <p>
             Assess your daily food intake to keep your health incheck.
-        </p>
-      </div>
-      <div>
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionAssesDetailsVisibility()">
+          </p>
+        </div>
+        <div>
+          <ion-row>
+            <ion-col class="ion-align-self-end">
+              <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionAssesDetailsVisibility()">
                 Continue with Nutrition assessment</ion-button>
-            <ion-button expand="block" class="ion-align-self-center" (click)="nutritionPageCardBackBtn()">back</ion-button>                
-          </ion-col>
-        </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+
+      </ion-card>
+
+      <div style="padding-top: 60px">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" stacked (click)="nutritionPageCardBackBtn()"
+                src="assets/images/backbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active"
+                src="assets/images/forwardbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
-      
-    </ion-card>
+
+
+
+    </div>
 
     <!-- EarnMorePoint - Nutrition Assesment_2 -->
-    <ion-card class="nutritionAssesDetailsCard" *ngIf="isNutritionAssesDetailsPageVisible">
-      <ion-grid class="nutritionAssesDetailsCard">
-        <ion-row>
-          <ion-item>
-            <ion-label text-wrap>In a week how often you do your breakfast? </ion-label>
-            <ion-select value="everyday" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="2">2</ion-select-option>
-              <ion-select-option value="3">3</ion-select-option>
-              <ion-select-option value="4">4</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-              <ion-select-option value="6">6</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-row>
-        <ion-row>
-        </ion-row>
+    <div *ngIf="isNutritionAssesDetailsPageVisible">
+      <ion-item>
+        <ion-img src="assets/images/medalsheet.png"></ion-img>
+      </ion-item>
+      <ion-card class="nutritionAssesDetailsCard">
+        <ion-grid class="nutritionAssesDetailsCard">
+          <ion-row>
+            <ion-item>
+              <ion-label text-wrap>Do you eat breakfast everyday? </ion-label>
+              <ion-select value="Yes" interface="popover" style="padding-left: 83px">
+                <ion-select-option value="Yes">Yes</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="times">2-4 times a week</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-row>
+          <ion-row>
+          </ion-row>
 
-        <ion-row>
-          <ion-item>
-            <ion-label text-wrap>In a week how often you do your Lunch? </ion-label>
-            <ion-select value="everyday" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="2">2</ion-select-option>
-              <ion-select-option value="3">3</ion-select-option>
-              <ion-select-option value="4">4</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-              <ion-select-option value="6">6</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-row>
+          <ion-row>
+            <ion-item>
+              <ion-label text-wrap>How many litres of water you consume in a day? </ion-label>
+              <ion-select value="1" interface="popover">
+                <ion-select-option value="1">1-2 litres</ion-select-option>
+                <ion-select-option value="2">2-4 litres</ion-select-option>
+                <ion-select-option value="3">More than 4 litres</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-row>
 
-        <ion-row>
-          <ion-item>
-            <ion-label text-wrap>In a week how often you do your Junk food? </ion-label>
-            <ion-select value="5" interface="popover">
-              <ion-select-option value="everyday">Everyday</ion-select-option>
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="2">2</ion-select-option>
-              <ion-select-option value="3">3</ion-select-option>
-              <ion-select-option value="4">4</ion-select-option>
-              <ion-select-option value="5">5</ion-select-option>
-              <ion-select-option value="6">6</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-row>
+          <ion-row>
+            <ion-item>
+              <ion-label text-wrap>How often do you eat junk food like burgers, fries, pizzas etc </ion-label>
+              <ion-select value="1" interface="popover">
+                <ion-select-option value="1">1-2 times a week</ion-select-option>
+                <ion-select-option value="2">2-3 times a week</ion-select-option>
+                <ion-select-option value="3"> More than 3 times a week</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-row>
+          <ion-row>
+            <ion-item lines="none">
+              <ion-label text-wrap>What time do you have your dinner? </ion-label>
+              <ion-select value="1" interface="popover">
+                <ion-select-option value="1">7 - 8 pm</ion-select-option>
+                <ion-select-option value="2">8 - 9 pm</ion-select-option>
+                <ion-select-option value="3">after 9 pm </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
 
-        <ion-row>
-          <ion-col class="ion-align-self-end">
-            <ion-button expand="block" class="ion-align-self-center" (click)="setNutritionCamPageVisibility($event)">
-              Next
-            </ion-button>
-            <ion-button expand="block" class="ion-align-self-center" (click)="nutritionCamPageBackBtn($event)">back
-              </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      
-    </ion-card>
+      <div style="padding-top: 240px">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" stacked (click)="nutritionCamPageBackBtn($event)"
+                src="assets/images/backbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <ion-img style="width: 50%;" stacked (click)="setNutritionCamPageVisibility($event)"
+                src="assets/images/forwardbutton.png"></ion-img>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+    </div>
 
     <!-- EarnMorePoint - Nutrition Assesment_3 -->
     <ion-card class="nutritionCamCard" *ngIf="isNutritionCamPageVisible">
@@ -301,10 +391,12 @@
         </ion-row>
         <ion-button expand="block" class="ion-align-self-center" (click)="nutritionCamCardBackBtn()">back</ion-button>
       </ion-grid>
-      
+
     </ion-card>
 
     <!-- FitnessDevices -->
+
+
     <ion-card style="height: 80%"  *ngIf="isFitnessDevicesPageVisible">
       <div style="text-align: center">
         <p> Pair your fitness devises</p>
@@ -343,22 +435,23 @@
       
     </ion-card>
 
+
     <!-- Points Statement Card -->
     <ion-card class="pointsStatementCard" *ngIf="isPointsStatementPageVisible">
-      <ion-grid> 
-          <ion-card style="box-shadow: none">
-        <ion-row>
-          <ion-col style="background-color:#33d8fd">
-            <ion-label style="color: azure">For the Week</ion-label>
-          </ion-col>
-          <ion-col style="background-color: #b633fd">
-            <ion-label style="color: azure">Activity Details</ion-label>
-          </ion-col>
-          <ion-col style="background-color: #ff9a60">
-            <ion-label style="color: azure">Points Earned</ion-label>
-          </ion-col>
-        </ion-row>
-      </ion-card>
+      <ion-grid>
+        <ion-card style="box-shadow: none">
+          <ion-row>
+            <ion-col style="background-color:#33d8fd">
+              <ion-label style="color: azure">For the Week</ion-label>
+            </ion-col>
+            <ion-col style="background-color: #b633fd">
+              <ion-label style="color: azure">Activity Details</ion-label>
+            </ion-col>
+            <ion-col style="background-color: #ff9a60">
+              <ion-label style="color: azure">Points Earned</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-card>
         <!-- week 1 details -->
         <ion-card>
           <ion-row>
@@ -374,118 +467,118 @@
             </ion-col>
 
           </ion-row>
-          
-          <ion-row>
-              <ion-col style="background-color:#33d8fd"lines=none>
-                <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-              </ion-col>
-              
-              <ion-col>
-                <ion-label  style="color:#228B22">Sleep points</ion-label>
-              </ion-col>
-              <ion-col>
-                <ion-label style="color:#228B22">9000</ion-label>
-              </ion-col>
-            </ion-row>
 
-            <ion-row>
-                <ion-col style="background-color:#33d8fd"lines=none>
-                  <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-                </ion-col>
-                
-                <ion-col>
-                  <ion-label  style="color:#228B22">Nutrition points</ion-label>
-                </ion-col>
-                <ion-col>
-                  <ion-label  style="color:#228B22">7500</ion-label>
-                </ion-col>
-              </ion-row>
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#228B22">Sleep points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#228B22">9000</ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#228B22">Nutrition points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#228B22">7500</ion-label>
+            </ion-col>
+          </ion-row>
         </ion-card>
         <!-- week 2 details -->
         <ion-card>
 
-            <ion-row>
-              <ion-col style="background-color:#33d8fd">
-                <ion-label style="color: azure">14th July – 20th July 2019</ion-label>
-              </ion-col>
-  
-              <ion-col>
-                <ion-label style="color:#ff9a60"  >Exercise points</ion-label>
-              </ion-col>
-              <ion-col>
-                <ion-label style="color:#ff9a60">5000</ion-label>
-              </ion-col>
-  
-            </ion-row>
-            
-            <ion-row>
-                <ion-col style="background-color:#33d8fd"lines=none>
-                  <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-                </ion-col>
-                
-                <ion-col>
-                  <ion-label style="color:#fd3355">Sleep points</ion-label>
-                </ion-col>
-                <ion-col>
-                  <ion-label style="color:#fd3355"> 4000</ion-label>
-                </ion-col>
-              </ion-row>
-  
-              <ion-row>
-                  <ion-col style="background-color:#33d8fd"lines=none>
-                    <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-                  </ion-col>
-                  
-                  <ion-col>
-                    <ion-label style="color:#fd3355">Nutrition points</ion-label>
-                  </ion-col>
-                  <ion-col>
-                    <ion-label style="color:#fd3355">4000</ion-label>
-                  </ion-col>
-                </ion-row>
+          <ion-row>
+            <ion-col style="background-color:#33d8fd">
+              <ion-label style="color: azure">14th July – 20th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#ff9a60">Exercise points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#ff9a60">5000</ion-label>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#fd3355">Sleep points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#fd3355"> 4000</ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#fd3355">Nutrition points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#fd3355">4000</ion-label>
+            </ion-col>
+          </ion-row>
         </ion-card>
         <!-- week 3 details -->
         <ion-card>
 
-            <ion-row>
-              <ion-col style="background-color:#33d8fd">
-                <ion-label style="color: azure">21st July – 27th July 2019 </ion-label>
-              </ion-col>
-  
-              <ion-col>
-                <ion-label style="color:#228B22">Exercise points</ion-label>
-              </ion-col>
-              <ion-col>
-                <ion-label style="color:#228B22">8100</ion-label>
-              </ion-col>
-  
-            </ion-row>
-            
-            <ion-row>
-                <ion-col style="background-color:#33d8fd"lines=none>
-                  <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-                </ion-col>
-                
-                <ion-col>
-                  <ion-label style="color:#ff9a60">Sleep points</ion-label>
-                </ion-col>
-                <ion-col>
-                  <ion-label style="color:#ff9a60">7000</ion-label>
-                </ion-col>
-              </ion-row>
-  
-              <ion-row>
-                  <ion-col style="background-color:#33d8fd"lines=none>
-                    <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
-                  </ion-col>
-                  
-                  <ion-col>
-                    <ion-label style="color:#fd3355">Nutrition points</ion-label>
-                  </ion-col>
-                  <ion-col>
-                    <ion-label style="color:#fd3355">5500</ion-label>
-                  </ion-col>
-                </ion-row>
+          <ion-row>
+            <ion-col style="background-color:#33d8fd">
+              <ion-label style="color: azure">21st July – 27th July 2019 </ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#228B22">Exercise points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#228B22">8100</ion-label>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#ff9a60">Sleep points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#ff9a60">7000</ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="background-color:#33d8fd" lines=none>
+              <ion-label style="color:#33d8fd">7th July – 13th July 2019</ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label style="color:#fd3355">Nutrition points</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label style="color:#fd3355">5500</ion-label>
+            </ion-col>
+          </ion-row>
         </ion-card>
       </ion-grid>
       <ion-button expand="block" class="ion-align-self-center" (click)="earnMorePointsCardBackBtn()">back</ion-button>
