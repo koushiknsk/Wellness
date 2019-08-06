@@ -23,7 +23,7 @@ app.get("/callback", (req, res) => {
     console.log(req.query.code)
 	client.getAccessToken(req.query.code , 'http://127.0.0.1:3000/callback').then(result => {
 		// use the access token to fetch the user's profile information
-		client.get("/activities/steps/date/2019-07-28/1d.json", result.access_token).then(results => {
+		client.get("/activities/steps/date/today/1m.json", result.access_token).then(results => {
 			res.send(results[0]);
 		}).catch(err => {
 			res.status(err.status).send(err);
