@@ -17,7 +17,7 @@ export class WeeklyReportPage implements OnInit {
   ngOnInit() {
 
    // Bar chart:
-this.BarChart = new Chart('barChart', {
+  this.BarChart = new Chart('barChart', {
   type: 'bar',
 data: {
  labels: ["07th-13th July", "14th-19th July", "21st-27th July"],
@@ -58,6 +58,6 @@ options: {
 }
 });
 
-  }
+   }
 
 }

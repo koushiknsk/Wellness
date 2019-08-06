@@ -30,7 +30,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),    
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    
   ],
   declarations: [MainLandingPagePage]
 })

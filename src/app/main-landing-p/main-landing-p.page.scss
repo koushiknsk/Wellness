@@ -1,6 +1,6 @@
 
 .mainContainer{
-    height:100%;
+    height:35%;
 }
 
 div.status-grid ion-col{
@@ -106,4 +106,8 @@ div.fitness{
     width: 155px;
     text-align: center;
     border: 1px solid #ddd;
+}
+
+canvas{
+    margin-top: 5%;
 }
