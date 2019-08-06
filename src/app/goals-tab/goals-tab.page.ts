@@ -6,48 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goals-tab.page.scss'],
 })
 export class GoalsTabPage implements OnInit {
-  isBVisible : boolean = false;
-  isSVisible : boolean = false;
-  isGVisible : boolean = false;
-  isPVisible : boolean = false;
-  isMainContentCardVisible :boolean = true;
-  isEarnMorePointsCardVisible : boolean =false;
-  isGoalPageCardVisible :boolean= false;
-
+  
+  togg:boolean = true;
+  count : number = 0
+  updateToggleSet(sTog : number ){
+    this.count++;
+    if(sTog === 1 && this.count%2===1){
+      this.togg = false;
+    }
+    else if(sTog === 1 && this.count%2===0){
+      this.togg = true;
+    }
+  }
+ 
   pointsEarned : number
   pointsRequired : number
 
   constructor() {
-    this.setPointsEarned(20000);
-    this.setPointsRequired(2000); }
-    setPointsEarned(pointsEarned : number){
-      this.pointsEarned = pointsEarned;
-    }
   
-    setPointsRequired(pointsRequired : number){
-      this.pointsRequired = pointsRequired;
-    }
-  
-    setVisibility(){
-  
-      if(this.pointsEarned >= 0 && this.pointsEarned < 10000){
-        this.isBVisible = true;
-      }
-      else if(this.pointsEarned >= 10000 && this.pointsEarned < 20000){
-        this.isSVisible = true;
-      }
-      else if(this.pointsEarned >= 20000 && this.pointsEarned < 30000){
-        this.isGVisible = true;
-      }
-      else if(this.pointsEarned >= 30000 && this.pointsEarned <= 40000){
-        this.isPVisible = true;
-      }
-  
-    }
-
+  }
     ngOnInit() {
-      this.setVisibility();
-  
+     
     }
 
 }

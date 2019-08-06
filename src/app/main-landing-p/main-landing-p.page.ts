@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { Chart } from "chart.js";
 
 @Component({
   selector: 'app-main-landing-page',
@@ -15,15 +16,39 @@ export class MainLandingPagePage implements OnInit {
   isNutritionAssesDetailsPageVisible: boolean = false;
   isNutritionCamPageVisible: boolean = false;
   isFitnessDevicesPageVisible: boolean = false;
-  isPointsStatementPageVisible: boolean =false;
+  isPointsStatementPageVisible: boolean = false;
 
+  @ViewChild("doughnutCanvas") doughnutCanvas: ElementRef;
+  doughnutChart: Chart;
 
   constructor() {
   }
 
   ngOnInit() {
-
+    this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
+      type: "doughnut",
+      data: {
+        labels: ["Exercise","Nutrition","Sleep"],
+        datasets: [
+          {
+            label: "Charts",
+            data: [3500, 1000, 2000,  3500],
+            backgroundColor: [
+              "rgba(255, 99, 132)",
+              "rgba(54, 162, 235)",
+              "rgba(255, 206, 86)",
+              "rgb(150, 150, 150)",
+            ],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            borderWidth:1, 
+          }  
+          
+        ]
+      }
+    });
   }
+
+  
 
   setEarnedPointsCardVisbility() {
     this.isMainContentCardVisible = false;
@@ -32,7 +57,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isEarnMorePointsCardVisible = true;
   }
   setNutritionPageCardVisibility() {
@@ -42,7 +67,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesmentCardVisible = true;
   }
   nutritionPageCardBackBtn() {
@@ -51,7 +76,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isEarnMorePointsCardVisible = true;
     this.isNutritionAssesmentCardVisible = false;
   }
@@ -61,7 +86,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = true;
   }
@@ -70,7 +95,7 @@ export class MainLandingPagePage implements OnInit {
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
     this.isNutritionAssesDetailsPageVisible = true;
@@ -81,7 +106,7 @@ export class MainLandingPagePage implements OnInit {
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = true;
   }
@@ -91,7 +116,7 @@ export class MainLandingPagePage implements OnInit {
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = true;
     this.isSleepTrackingCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
   }
@@ -100,32 +125,32 @@ export class MainLandingPagePage implements OnInit {
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
     this.isFitnessDevicesPageVisible = true;
   }
-  nutritionCamCardBackBtn(){
+  nutritionCamCardBackBtn() {
     this.isMainContentCardVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesDetailsPageVisible = true;
     this.isNutritionCamPageVisible = false;
   }
-  earnMorePointsCardBackBtn(){
+  earnMorePointsCardBackBtn() {
     this.isMainContentCardVisible = true;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
     this.isNutritionAssesmentCardVisible = false;
     this.isSleepTrackingCardVisible = false;
-    this.isPointsStatementPageVisible=false;
+    this.isPointsStatementPageVisible = false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
   }
-  pointsEarnedCardVisibility(){
+  pointsEarnedCardVisibility() {
     this.isMainContentCardVisible = false;
     this.isFitnessDevicesPageVisible = false;
     this.isEarnMorePointsCardVisible = false;
@@ -133,7 +158,19 @@ export class MainLandingPagePage implements OnInit {
     this.isSleepTrackingCardVisible = false;
     this.isNutritionAssesDetailsPageVisible = false;
     this.isNutritionCamPageVisible = false;
-    this.isPointsStatementPageVisible=true;
+    this.isPointsStatementPageVisible = true;
   }
 
+  public doughnutChartLabels: string[] = ['Age 18 to 24', 'Age 25 to 35', 'Above 35+'];
+  public demodoughnutChartData: number[][] = [[350, 450, 100], [250, 350, 150]];
+  public doughnutChartType: string = 'doughnut';
+
+  // events
+  public chartClicked(e: any): void {
+    console.log(e);
+  }
+
+  public chartHovered(e: any): void {
+    console.log(e);
+  }
 }
