@@ -49,6 +49,11 @@ options: {
              beginAtZero:true
          }
      }]
+ },
+ legend:{
+   labels:{
+     fontSize: 8
+   }
  }
 }
 });

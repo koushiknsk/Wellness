@@ -1,9 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Fitbit</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-    <div id='chart_div' style='width: 100%'></div>
+  <ion-img src="../../assets/images/fitbit.jpeg" style="top:0px;"></ion-img>
+    <ion-grid class="statistics">
+        <ion-row align-items-center> 
+          <ion-col>
+               Monthly Average:
+           </ion-col>
+           <ion-col> 130</ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+          <ion-col>
+             Steps to weekly milestone:
+             </ion-col>
+             <ion-col> 10000</ion-col>
+        </ion-row>
+      </ion-grid>
+    <div id='chart_div' style=' height:23%;left: 2%; margin: auto; position: absolute; bottom: 40%' ></div>
+    <ion-grid style="position:absolute; bottom:5%; width:100% ;text-align:center">
+        <ion-row>
+          <ion-col col-6 col-md-4 col-xl-3 style="border: 1px solid #ddd;">
+            <div class="image-container">
+              <ion-img src="../../assets/images/sleep.png" style="height:150px;"></ion-img>
+              <p>Sleep</p>
+            </div>
+            
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3 style="border: 1px solid #ddd;">
+              <div class="image-container">
+                <ion-img src="../../assets/images/food.jpg" style="height:150px;"></ion-img>
+                <p>Nutrition</p>
+              </div>
+             
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" class="ion-align-self-center" [routerLink]="['/home/home']" >back</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>    
+    
 </ion-content>
