@@ -305,34 +305,42 @@
     </ion-card>
 
     <!-- FitnessDevices -->
-    <ion-card *ngIf="isFitnessDevicesPageVisible">
-
-      <div>
+    <ion-card style="height: 80%"  *ngIf="isFitnessDevicesPageVisible">
+      <div style="text-align: center">
         <p> Pair your fitness devises</p>
       </div>
-      <div>
-        <ion-item lines="none">
-            <ion-img slot="start" style="height: 25%;width: 5%" src="assets/images/garmin.jpg"></ion-img>
-          <ion-label>Garmin</ion-label>
-          <ion-toggle slot="end"></ion-toggle>
-        </ion-item>
-        <ion-item lines="none">
-            <ion-img slot="start" style="height: 25%;width: 5%" src="assets/images/Fitbit.png"></ion-img>
-          <ion-label>Fitbit</ion-label>
-          <ion-toggle slot="end"></ion-toggle>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-img slot="start" style="width: 4%;height:2%" src="assets/images/samsung.png"></ion-img>
-          <ion-label>Samsung Watch</ion-label>
-          <ion-toggle slot="end"></ion-toggle>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-icon slot="start" name="logo-apple"></ion-icon>
-          <ion-label>Apple Watch</ion-label>
-          <ion-toggle slot="end"></ion-toggle>
-        </ion-item>
-      </div>
-      <ion-button expand="block" style="padding-left: 5px;padding-right: 5px"class="ion-align-self-center" (click)="earnMorePointsCardBackBtn()">back</ion-button>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 col-md-4 col-xl-3>
+            <div class="image-container" [style.background-image]="'url(assets/images/garmin.jpg)'">
+
+            </div>
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3>
+              <div class="image-container" [style.background-image]="'url(assets/images/Fitbit.png)'">
+
+              </div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding-bottom: 20%">
+          <ion-col col-6 col-md-4 col-xl-3>
+              <div class="image-container" [style.background-image]="'url(assets/images/applelogo.png)'">
+
+              </div>
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3>
+              <div class="image-container" [style.background-image]="'url(assets/images/galaxy.jpg)'">
+
+              </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-6 col-md-4 col-xl-3>
+                <ion-button expand="block" class="ion-align-self-center" (click)="earnMorePointsCardBackBtn()">back</ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      
     </ion-card>
 
     <!-- Points Statement Card -->
