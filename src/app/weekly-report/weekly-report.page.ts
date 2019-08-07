@@ -10,7 +10,7 @@ import * as CanvasJS from 'canvasjs';
   styleUrls: ['./weekly-report.page.scss'],
 })
 export class WeeklyReportPage implements OnInit {
-  BarChart=[];
+  BarChart;
 
   constructor() { }
 
