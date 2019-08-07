@@ -124,7 +124,7 @@
             <ion-row>
               <p text-wrap>
                 Below are all ways you can earn points. Points to stay healthy and active. The more you earn, the higher
-                your ststus and greater the rewards
+                your status and greater the rewards
               </p>
             </ion-row>
             <ion-row>
@@ -347,7 +347,11 @@
       </div>
   
       <!-- EarnMorePoint - Nutrition Assesment_3 -->
-      <ion-card class="nutritionCamCard" *ngIf="isNutritionCamPageVisible">
+      <div *ngIf="isNutritionCamPageVisible">
+          <ion-item>
+              <ion-img src="assets/images/medalsheet.png"></ion-img>
+            </ion-item>
+      <ion-card class="nutritionCamCard" >
         <ion-grid style="height: 100%">
   
           <ion-row class="nutricationCamLabel">
@@ -363,11 +367,32 @@
               <ion-button expand="block" class="ion-align-self-center">Submit</ion-button>
             </ion-col>
           </ion-row>
-          <ion-button expand="block" class="ion-align-self-center" (click)="nutritionCamCardBackBtn()">back</ion-button>
         </ion-grid>
   
       </ion-card>
-  
+
+      <div style="padding-top: 80px">
+          <ion-grid>
+            <ion-row>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" stacked (click)="nutritionCamCardBackBtn($event)"
+                  src="assets/images/backbutton.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" stacked (click)="setNutritionCamPageVisibility($event)"
+                  src="assets/images/forwardbutton.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+    </div>
       <!-- FitnessDevices -->
      <div *ngIf="isFitnessDevicesPageVisible">
         <ion-item>
@@ -404,29 +429,30 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div >
-            <ion-grid>
-              <ion-row>
-                <ion-col></ion-col>
-                <ion-col>
-                  <ion-img style="width: 50%;" (click)="earnMorePointsCardBackBtn()" routerLinkActive="router-link-active"
-                    src="assets/images/backbutton.png"></ion-img>
-                </ion-col>
-                <ion-col></ion-col>
-                <ion-col>
-                  <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
-                </ion-col>
-                <ion-col></ion-col>
-                <ion-col>
-                  <ion-img style="width: 50%;" (click)="earnMorePointsCardBackBtn()" routerLinkActive="router-link-active"
-                    src="assets/images/forwardbutton.png"></ion-img>
-                </ion-col>
-                <ion-col></ion-col>
-              </ion-row>
-            </ion-grid>
-          </div>
-  
+       
       </ion-card>
+      <div style="padding-top: 50px">
+          <ion-grid>
+            <ion-row>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" (click)="earnMorePointsCardBackBtn()" routerLinkActive="router-link-active"
+                  src="assets/images/backbutton.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+              <ion-col>
+                <ion-img style="width: 50%;" (click)="earnMorePointsCardBackBtn()" routerLinkActive="router-link-active"
+                  src="assets/images/forwardbutton.png"></ion-img>
+              </ion-col>
+              <ion-col></ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+
       </div>
   
   
