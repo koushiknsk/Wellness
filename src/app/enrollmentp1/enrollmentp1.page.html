@@ -149,17 +149,23 @@
                       Blood Pressure</p>
                   </ion-col>
                   <ion-col style="padding-top: 0%; padding-bottom: 0%; text-align: center">
-                    <ion-card style="text-align: center">
-                      <ion-select value="unit" interface="popover" style="text-align: center; width: 100%">
-                        <ion-select-option value="unit" style="text-align: center; width: 100%" readonly>unit()</ion-select-option>
-                        <ion-select-option value="systolic" style="text-align: center; width: 100%">Systolic (mmHG)</ion-select-option> 
-                        <ion-select-option value="Diastolic" style="text-align: center; width: 100%">Diastolic (mmHG)</ion-select-option>
-                      </ion-select>
-                    </ion-card>
+                      <ion-card>
+                          <ion-item class="username">
+                              <ion-label style="text-align: center" position="floating" value="Username">
+                                Systolic(mmHG)
+                              </ion-label>
+                              <ion-input style="text-align: center" type="text"></ion-input>
+                            </ion-item>
+                      </ion-card>
                   
                  
                     <ion-card>
-                      <ion-input></ion-input>
+                        <ion-item class="username">
+                            <ion-label style="text-align: center" position="floating" value="Username">
+                              Diastolic(mmHG)
+                            </ion-label>
+                            <ion-input style="text-align: center" type="text"></ion-input>
+                          </ion-item>
                     </ion-card>
                   </ion-col>
                 </ion-row>
@@ -175,21 +181,19 @@
               </ion-avatar>
   
               <ion-grid style="padding-bottom: 0%;padding-top: 0%;">
-                <ion-row>
+                <ion-row align-items-center>
                   <ion-col>
                     <p style="margin-bottom: 0%;margin-top:0%;padding-left: 3%; font-size: smaller; font-weight: 500">
                       Blood Sugar</p>
                   </ion-col>
-                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
+                  <ion-col style="padding-top: 0%;padding-bottom: 0%; width: 70%;">
                     <ion-card>
-                      <ion-select value="unit" interface="popover">
+                      <ion-select value="unit" interface="popover" style="width:100%">
                         <ion-select-option value="unit" readonly>unit()</ion-select-option>
                         <ion-select-option value="mmol">mmol/Hg</ion-select-option>
                         <ion-select-option value="mg">mg/dL</ion-select-option>
                       </ion-select>
                     </ion-card>
-                  </ion-col>
-                  <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
                       <ion-input></ion-input>
                     </ion-card>
