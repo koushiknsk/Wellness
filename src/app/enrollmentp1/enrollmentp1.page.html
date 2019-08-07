@@ -188,15 +188,13 @@
                   </ion-col>
                   <ion-col style="padding-top: 0%;padding-bottom: 0%; width: 70%;">
                     <ion-card>
-                      <ion-select value="unit" interface="popover" style="width:100%">
-                        <ion-select-option value="unit" readonly>unit()</ion-select-option>
-                        <ion-select-option value="mmol">mmol/Hg</ion-select-option>
-                        <ion-select-option value="mg">mg/dL</ion-select-option>
-                      </ion-select>
-                    </ion-card>
-                    <ion-card>
-                      <ion-input></ion-input>
-                    </ion-card>
+                      <ion-item class="username">
+                          <ion-label style="text-align: center" position="floating" value="Username">
+                            mg/dL
+                          </ion-label>
+                          <ion-input style="text-align: center" type="text"></ion-input>
+                        </ion-item>
+                  </ion-card>
                   </ion-col>
                 </ion-row>
   
@@ -209,7 +207,7 @@
       </ion-row>
   
     </ion-grid>
-    <ion-grid>
+    <ion-grid style="bottom:0%; position:absolute; width: 100%">
       <ion-row>
         <ion-col></ion-col>
         <ion-col>
