@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-img src="../../assets/images/fitbit.jpeg" style="top:0px;"></ion-img>
+  <ion-img src="../../assets/images/fitbit.jpeg" style="top:0px;height: 20%; width:100%"></ion-img>
     <ion-grid class="statistics">
       <ion-row>
         <ion-title>Exercise</ion-title>
@@ -17,7 +17,7 @@
              <ion-col> 10000</ion-col>
         </ion-row>
       </ion-grid>
-    <div id='chart_div' style=' height:23%;left: 2%; margin: auto; position: absolute; bottom: 40%' ></div>
+    <div id='chart_div' style=' height:15%;left: 2%; margin: auto; position: absolute; bottom:50%' ></div>
     <ion-grid style="position:absolute; bottom:5%; width:100% ;text-align:center">
         <ion-row>
           <ion-col col-6 col-md-4 col-xl-3 style="border: 1px solid #ddd;">
@@ -35,11 +35,24 @@
              
           </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <ion-button expand="block" class="ion-align-self-center" [routerLink]="['/home/home']" >back</ion-button>
-            </ion-col>
-        </ion-row>
     </ion-grid>    
-    
+    <ion-grid style="bottom:0%; position:absolute; width: 100%">
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" [routerLink]="['/home/home']" routerLinkActive="router-link-active"
+            src="assets/images/backbutton.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  
 </ion-content>
