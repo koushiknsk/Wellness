@@ -18,11 +18,6 @@ const routes: Routes = [
   }
 ];
 
-@Component({
-  selector: 'app-main-landing-p',
-  templateUrl: './main-landing-p.page.html',
-  styleUrls: ['./main-landing-p.page.scss'],
-})
 
 @NgModule({
   imports: [
