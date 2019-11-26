@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 
-// initialize the Fitbit API client test
+// initialize the Fitbit API client
 const FitbitApiClient = require("fitbit-node");
 const client = new FitbitApiClient({
 	clientId: "22DNXB",
