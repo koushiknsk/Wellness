@@ -19,14 +19,14 @@
               <ion-icon name="contact"></ion-icon>
               Username
             </ion-label>
-            <ion-input style="text-align: center" type="text"></ion-input>
+            <ion-input style="text-align: center" type="text" [(ngModel)]="username"></ion-input>
           </ion-item>
           <ion-item class="password">
             <ion-label style="text-align: center" position="floating">
               <ion-icon name="key"></ion-icon>
               Password
             </ion-label>
-            <ion-input style="text-align: center" type="password"></ion-input>
+            <ion-input style="text-align: center" type="password" [(ngModel)]="password"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -40,11 +40,13 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="ion-align-self-center">
-          <ion-button expand="block" shape="round" [routerLink]="['/member-enrollment']" routerLinkActive="router-link-active"
-          class="ion-align-self-center">Submit</ion-button>
-          <span style="color:white">Create new account</span>         
-        </ion-col>
+      
+      <ion-col class="ion-align-self-center">
+        <ion-button expand="block" shape="round"
+          class="ion-align-self-center" (click)="login()">Submit</ion-button>
+        <span style="color:white" (click)="redirectToRegiister()">Create new account</span>         
+      </ion-col>
+      
       </ion-row>
     </ion-grid>  
   </div>
