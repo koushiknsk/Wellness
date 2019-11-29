@@ -34,7 +34,7 @@
                   <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
                         <div style="padding-left: 15px">
-                      <ion-input value="116235"></ion-input>
+                      <ion-input [(ngModel)]="memEnroll.insPolicyNumber" ></ion-input>
                       </div>
                     </ion-card>
                   </ion-col>
@@ -65,7 +65,7 @@
   
                   <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
-                      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                      <ion-datetime [(ngModel)]="memEnroll.dob" placeholder="Select Date"></ion-datetime>
                     </ion-card>
                   </ion-col>
   
@@ -97,7 +97,7 @@
                   <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
                       <div style="padding-left: 15px">
-                      <ion-input type="email" value=" Cathy.muller@gmail.com" style="width: 100%;">
+                      <ion-input type="email" [(ngModel)]="memEnroll.email" style="width: 100%;">
                       </ion-input>
                     </div>
                     </ion-card>
@@ -130,7 +130,7 @@
   
                   <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
-                      <ion-select value="female" interface="popover">
+                      <ion-select [(ngModel)]="memEnroll.gender" interface="popover">
                         <ion-select-option value="male">Male</ion-select-option>
                         <ion-select-option value="female">Female</ion-select-option>
                       </ion-select>
@@ -166,7 +166,7 @@
                   <ion-col style="padding-top: 0%;padding-bottom: 0%;">
                     <ion-card>
                         <div style="padding-left: 15px">
-                      <ion-input type="tel" style="padding-bottom: 5%;padding-top: 5%;" value="+852 6689251" slot="end">
+                      <ion-input type="tel" style="padding-bottom: 5%;padding-top: 5%;" [(ngModel)]="memEnroll.mobileNo" slot="end">
                       </ion-input>
                       </div>
                     </ion-card>
@@ -193,7 +193,7 @@
         </ion-col>
         <ion-col></ion-col>
         <ion-col>
-          <ion-img style="width: 50%;" [routerLink]="['/enrollmentp1']" routerLinkActive="router-link-active"
+          <ion-img style="width: 50%;" (click)="updateComppObj()"
             src="assets/images/forwardbutton.png"></ion-img>
         </ion-col>
         <ion-col></ion-col>
