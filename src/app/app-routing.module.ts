@@ -10,8 +10,10 @@ const routes: Routes = [
   { path: 'enrollmentp1/:id', loadChildren: './enrollmentp1/enrollmentp1.module#Enrollmentp1PageModule' },
   { path: 'enrollmentp2', loadChildren: './enrollmentp2/enrollmentp2.module#Enrollmentp2PageModule' },
   { path: 'enrollmentp3', loadChildren: './enrollmentp3/enrollmentp3.module#Enrollmentp3PageModule' },
+  { path: 'enrollmentp3/:id', loadChildren: './enrollmentp3/enrollmentp3.module#Enrollmentp3PageModule' },
   { path: 'enrollmentp4', loadChildren: './enrollmentp4/enrollmentp4.module#Enrollmentp4PageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'home/:id', loadChildren: './home/home.module#HomePageModule' },
   { path: 'main-landing-page', loadChildren: './main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
   { path: 'goals-tab', loadChildren: './goals-tab/goals-tab.module#GoalsTabPageModule' },
   { path: 'member-enrollment', loadChildren: './member-enrollment/member-enrollment.module#MemberEnrollmentPageModule' },
@@ -20,7 +22,8 @@ const routes: Routes = [
   { path: 'weekly-report', loadChildren: './weekly-report/weekly-report.module#WeeklyReportPageModule' },
   { path: 'fitbit', loadChildren: './fitbit/fitbit.module#FitbitPageModule' },
   { path: 'try-test', loadChildren: './pages/try-test/try-test.module#TryTestPageModule' },
-  { path: 'try-test/:id', loadChildren: './pages/try-test/try-test.module#TryTestPageModule' },  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'try-test/:id', loadChildren: './pages/try-test/try-test.module#TryTestPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
 
 
 

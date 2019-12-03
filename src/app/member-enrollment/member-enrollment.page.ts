@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DatabaseService, MemberEnrollment, Users} from 'src/app/services/Database.service'; 
+import { DatabaseService, MemberEnrollment} from 'src/app/services/Database.service'; 
 //import { DatabaseService} from 'src/app/services/Database.service'; 
 @Component({
   selector: 'app-member-enrollment',
@@ -22,25 +22,25 @@ export class MemberEnrollmentPage implements OnInit {
     mobileNo:''
   }
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private userService : DatabaseService) { 
-    console.log("entered constructor")
-
   }
 
   ngOnInit() {
-    console.log("entered ng")
-
   }
 
   ionViewWillEnter() {
     console.log("ion")
     this.currUserId = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(this.currUserId)
+    //need to check if there is any id on the current page
+    if(this.currUserId !=null){
     this.userService.getCurrentUserData(this.currUserId).subscribe(currUserData  =>{
       if(currUserData.memEnrollment != null)
        this.memEnroll = currUserData.memEnrollment
     })
+    }
   }
 
-  updateComppObj(){
+  updateMemEnrollData(){
     try{
       //We can check if this.memEnroll  is null just to verify if we have data or not
       // if we have data then we will proceed to next page w/o any updates else we will update data

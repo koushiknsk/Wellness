@@ -34,7 +34,7 @@
                 </p>
                 <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
                   Height</p>
-                <ion-select value="160" interface="popover">
+                <ion-select [(ngModel)]="personalDetails.height" interface="popover">
                   <ion-select-option value="160">160 cms</ion-select-option>
                   <ion-select-option value="165">165 cms</ion-select-option>
                   <ion-select-option value="170">170 cms</ion-select-option>
@@ -50,7 +50,7 @@
                 </p>
                 <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
                   Weight</p>
-                <ion-select value="80" interface="popover">
+                <ion-select [(ngModel)]="personalDetails.weight" interface="popover">
                   <ion-select-option value="80">80 Kgs</ion-select-option>
                   <ion-select-option value="90">90 Kgs</ion-select-option>
                   <ion-select-option value="100">100 Kgs</ion-select-option>
@@ -64,7 +64,7 @@
                 </p>
                 <p style="margin-bottom: 0%;margin-top:0%;padding-left: 30px; font-size: smaller; font-weight: 500;">
                   Waist</p>
-                <ion-select value="32" interface="popover">
+                <ion-select [(ngModel)]="personalDetails.waist" interface="popover">
                   <ion-select-option value="32">32 inches</ion-select-option>
                   <ion-select-option value="34">34 inches</ion-select-option>
                   <ion-select-option value="36">36 inches</ion-select-option>
@@ -118,7 +118,7 @@
 
       <ion-col align-items-center style="width:60%">
         <ion-card style="margin:20px">
-          <ion-input style="text-align: center"></ion-input>
+          <ion-input [(ngModel)]="personalDetails.bloodGroup" style="text-align: center"></ion-input>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -141,7 +141,7 @@
             <ion-label style="text-align: center" position="floating" value="Username">
               Systolic(mmHG)
             </ion-label>
-            <ion-input style="text-align: center" type="text"></ion-input>
+            <ion-input [(ngModel)]="personalDetails.systolic" style="text-align: center" type="text"></ion-input>
           </ion-item>
         </ion-card>
         <ion-card style="margin:20px; margin-top:5px">
@@ -149,7 +149,7 @@
             <ion-label style="text-align: center" position="floating" value="Username">
               Diastolic(mmHG)
             </ion-label>
-            <ion-input style="text-align: center" type="text"></ion-input>
+            <ion-input [(ngModel)]="personalDetails.diastolic" style="text-align: center" type="text"></ion-input>
           </ion-item>
         </ion-card>
 
@@ -173,7 +173,7 @@
             <ion-label style="text-align: center; margin-top:0" position="floating" value="Username">
               mg/dL
             </ion-label>
-            <ion-input style="text-align: center; margin-bottom: 5px" type="text"></ion-input>
+            <ion-input [(ngModel)]="personalDetails.bloodSugar" style="text-align: center; margin-bottom: 5px" type="text"></ion-input>
           </ion-item>
         </ion-card>
       </ion-col>
@@ -190,7 +190,7 @@
       </ion-col>
       <ion-col></ion-col>
       <ion-col>
-        <ion-img style="width: 50%;" [routerLink]="['/enrollmentp3']" routerLinkActive="router-link-active"
+        <ion-img style="width: 50%;" (click)="updatePersonalData()"
           src="assets/images/forwardbutton.png"></ion-img>
       </ion-col>
       <ion-col></ion-col>
