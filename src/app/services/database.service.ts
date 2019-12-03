@@ -5,6 +5,13 @@ import {AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import * as firebase from 'firebase';
 
+export interface Users{
+  //nullok true - should change in future 
+  memEnrollment?: MemberEnrollment 
+  personalDetails?: PersonalDetails
+  lifeStyleDetails?: LifestyleDetails
+  foodDetails?: FoodDetails
+}
 
 export interface MemberEnrollment {
   insPolicyNumber: '',
@@ -14,9 +21,30 @@ export interface MemberEnrollment {
   mobileNo:''
 }
 
-export interface Users{
-  memEnrollment?: MemberEnrollment
+export interface PersonalDetails {
+  height: '',
+  weight: '',
+  waist: '',
+  bloodGroup: '',
+  systolic: '',
+  diastolic: '',
+  bloodSugar: ''
 }
+
+export interface LifestyleDetails {
+  cigarettes: '',
+  alcohol: '',
+  feeling: ''
+}
+
+export interface FoodDetails{
+  wholegrains: '',
+  dairy: '',
+  fruits: '',
+  vegetables: '',
+  meatAndPoultry: ''
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -66,6 +94,30 @@ export class DatabaseService {
   addMemEnrollData(uid: string, memE: MemberEnrollment): Promise<void> {
     try{
       return this.afsAllUsersCollection.doc(uid).update({ memEnrollment: memE});
+    }catch(e){
+      console.log(e)
+    }
+  }
+
+  addpersonalData(uid: string, pDetails: PersonalDetails): Promise<void> {
+    try{
+      return this.afsAllUsersCollection.doc(uid).update({ personalDetails: pDetails});
+    }catch(e){
+      console.log(e)
+    }
+  }
+
+  addLifestyleData(uid: string, lDetails: LifestyleDetails): Promise<void> {
+    try{
+      return this.afsAllUsersCollection.doc(uid).update({ lifeStyleDetails: lDetails});
+    }catch(e){
+      console.log(e)
+    }
+  }
+
+  addFoodData(uid: string, fDetails: FoodDetails): Promise<void> {
+    try{
+      return this.afsAllUsersCollection.doc(uid).update({ foodDetails: fDetails});
     }catch(e){
       console.log(e)
     }

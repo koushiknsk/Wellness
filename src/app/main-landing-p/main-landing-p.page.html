@@ -86,7 +86,7 @@
   
   
         </ion-card>
-  
+        <!-- Main Home page buttons -->
         <div style="position:absolute; bottom:0; width: 100%">
           <ion-grid>
             <ion-row>
@@ -96,7 +96,8 @@
               </ion-col>
               <ion-col></ion-col>
               <ion-col>
-                <ion-img style="width: 50%;" src="assets/images/capgeminilogo.png"></ion-img>
+                <ion-img style="width: 50%;" [routerLink]="['/login']" routerLinkActive="router-link-active"
+                src="assets/images/capgeminilogo.png"></ion-img>
               </ion-col>
               <ion-col></ion-col>
               <ion-col>
