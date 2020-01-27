@@ -12,7 +12,7 @@ const routes: Routes = [
     path: '',
     component: HomePage,
     children: [      
-      { path: 'home', loadChildren: '../main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
+      { path: 'home/:id', loadChildren: '../main-landing-p/main-landing-p.module#MainLandingPagePageModule' },
       { path: 'goals',             loadChildren: '../goals-tab/goals-tab.module#GoalsTabPageModule' },
       { path: 'rewards', loadChildren: '../rewards-tab/rewards-tab.module#RewardsTabPageModule' },
 

@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Chart } from "chart.js";
+import { DatabaseService} from 'src/app/services/Database.service';
+import { Router } from '@angular/router';
+import { Platform} from '@ionic/angular'
+import { ActivatedRoute  } from '@angular/router';
  
 
 @Component({
@@ -21,8 +25,16 @@ export class MainLandingPagePage implements OnInit {
 
   @ViewChild("doughnutCanvas") doughnutCanvas: ElementRef;
   doughnutChart: Chart;
+  currUserId;
 
-  constructor() {
+  constructor(private activatedRoute: ActivatedRoute, public router: Router,private platform : Platform, private dbService : DatabaseService) {
+
+  }
+
+  ionViewWillEnter() {
+    this.currUserId = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(this.currUserId)
+    //need to check if there is any id on the current page
   }
 
   ngOnInit() {
@@ -173,5 +185,53 @@ export class MainLandingPagePage implements OnInit {
 
   public chartHovered(e: any): void {
     console.log(e);
+  }
+
+  async authorize(){
+    let firstEntry : boolean 
+    this.dbService.getCurrentUserData(this.currUserId).subscribe((cuData)=>{
+      firstEntry = cuData.firstEntry
+    })
+    //console.log(this.platform.is('cordova'))
+    let count = 0
+    let fitnessData ={
+      id: this.currUserId,
+      isGoogleData: true,
+      isFitbitData: false,
+      steps: '100',
+      distance: '3',
+      calories: '400',
+      sleep: 7
+    }
+
+    if(this.platform.is('cordova')){      
+      if(!this.dbService.isAuthorized){
+        this.dbService.gAuth()
+        firstEntry = false
+      }
+      if(this.dbService.isAuthorized){
+      await this.dbService.getTSteps()
+      await this.dbService.getDistance()
+      await this.dbService.getCalories()
+      //await this.dbService.getSleep()
+      }
+
+      if(this.dbService.steps != null){        
+        fitnessData.steps = this.dbService.steps
+        fitnessData.distance = this.dbService.distance
+        fitnessData.calories = this.dbService.calories
+        fitnessData.sleep = this.dbService.sleep
+        this.router.navigate(['/fitbit'],{
+          queryParams: fitnessData,
+        });
+      }
+    }
+    //else just push to fitbit page
+    else{
+      console.log(fitnessData)
+      this.router.navigate(['/fitbit'],{
+        queryParams: fitnessData,
+      });
+    }
   }
 }
