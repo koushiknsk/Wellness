@@ -203,6 +203,7 @@ export class TryTestPage implements OnInit {
       options: this.barChartOptions
     });
   }
+}
 
   // async aurthorization(){
   //   try{
@@ -367,7 +368,6 @@ export class TryTestPage implements OnInit {
 
   //   await alert.present()
   // }
-}
 
   // getUserData(){
   //   // this.health.query({

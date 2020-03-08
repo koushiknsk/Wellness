@@ -41,11 +41,17 @@ export class FitbitPage implements OnInit {
       this.ftDetails.sleep = this.x.sleep
       console.log(this.currUserId)
     })
-    //this.gAuth();
+    //this.getData()
   }
 
   ngOnInit() {
-    this.loadData()
+    
+  }
+  async ionViewWillEnter() {
+    //this.dbService.printData("ionViewWillEnter - Start")
+    await this.getData()
+    await this.loadData()
+    //this.dbService.printData("ionViewWillEnter - End")
   }
 
   async gAuth(){
@@ -53,11 +59,24 @@ export class FitbitPage implements OnInit {
     await this.dbService.gAuth()
   }
 
+  async getData(){
+    //this.dbService.printData("getData - Start")
+    if(this.dbService.isAuthorized){
+      await this.dbService.getTSteps()
+      // this.dbService.printData("getData - " + this.dbService.steps)
+      await this.dbService.getDistance()
+      await this.dbService.getCalories()
+      // await this.dbService.getSleep()
+    }else{
+      this.gAuth()
+    }
+  }
+
   async loadData(){
     console.log(this.ftDetails)
     if(this.dbService.isAuthorized){
+      await this.dbService.addFitnessDetails(this.currUserId,this.ftDetails)
       //this.dbService.printData(JSON.stringify(this.ftDetails))
-      this.dbService.addFitnessDetails(this.currUserId,this.ftDetails)
       //this.dbService.printData("End")
     }
     else{

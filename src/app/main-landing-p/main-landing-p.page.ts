@@ -198,10 +198,10 @@ export class MainLandingPagePage implements OnInit {
       id: this.currUserId,
       isGoogleData: true,
       isFitbitData: false,
-      steps: '100',
-      distance: '3',
-      calories: '400',
-      sleep: 7
+      steps: '123',
+      distance: '',
+      calories: '',
+      sleep: ''
     }
 
     if(this.platform.is('cordova')){      
@@ -210,21 +210,25 @@ export class MainLandingPagePage implements OnInit {
         firstEntry = false
       }
       if(this.dbService.isAuthorized){
-      await this.dbService.getTSteps()
-      await this.dbService.getDistance()
-      await this.dbService.getCalories()
-      //await this.dbService.getSleep()
+        await this.dbService.getTSteps()
+        await this.dbService.getDistance()
+        await this.dbService.getCalories()
+        // await this.dbService.getSleep()
+      // this.router.navigate(['/fitbit'],{
+      //   queryParams: fitnessData,
+      // });
       }
 
       if(this.dbService.steps != null){        
         fitnessData.steps = this.dbService.steps
         fitnessData.distance = this.dbService.distance
         fitnessData.calories = this.dbService.calories
-        fitnessData.sleep = this.dbService.sleep
+        // fitnessData.sleep = this.dbService.sleep
         this.router.navigate(['/fitbit'],{
           queryParams: fitnessData,
         });
       }
+
     }
     //else just push to fitbit page
     else{
