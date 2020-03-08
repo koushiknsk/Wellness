@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  currUserId;
+  try = "home"
+  constructor(private activatedRoute: ActivatedRoute,public router: Router) {
+  }
 
-  constructor() { }
+  ionViewWillEnter() {
+    this.currUserId = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(this.currUserId)
+    //need to check if there is any id on the current page
+  }
 
-  ngOnInit() {
+  ngOnInit(){
   }
 
 }

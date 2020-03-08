@@ -47,6 +47,7 @@ export class MemberEnrollmentPage implements OnInit {
       console.log(this.currUserId)
       this.userService.addMemEnrollData(this.currUserId,this.memEnroll)
       this.router.navigate(['/enrollmentp1',this.currUserId]);
+      //this.router.navigate(['/home/home',this.currUserId]);
     }catch(e){ 
       console.dir(e);
     }

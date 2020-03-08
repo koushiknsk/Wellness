@@ -25,7 +25,8 @@ export class LoginPage implements OnInit {
     try{
       const res  = await this.afAuth.auth.signInWithEmailAndPassword(username,password)      
       if(res != null){
-        this.router.navigate(['/member-enrollment',res.user.uid]);
+        //this.router.navigate(['/member-enrollment',res.user.uid]);
+        this.router.navigate(['/home/home',res.user.uid]);
       }
     }catch(e){
       console.dir(e);

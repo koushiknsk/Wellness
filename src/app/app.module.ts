@@ -16,8 +16,10 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-
-
+import {HttpClientModule} from '@angular/common/http';
+import {HTTP} from '@ionic-native/http/ngx';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { Health } from '@ionic-native/health/ngx';
 
 
 @NgModule({
@@ -26,11 +28,15 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
   imports: [ BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    HTTP,
+    GooglePlus,
+    Health,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: FirestoreSettingsToken, useValue: {} }
   ],

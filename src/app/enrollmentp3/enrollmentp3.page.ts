@@ -47,7 +47,7 @@ export class Enrollmentp3Page implements OnInit {
       console.log(this.currUserId)
       this.dbService.addLifestyleData(this.currUserId,this.lifeStyleDetails)
       this.dbService.addFoodData(this.currUserId,this.foodDetails)
-      this.router.navigate(['/home',this.currUserId]);
+      this.router.navigate(['/home/home',this.currUserId]);
     }catch(e){ 
       console.dir(e);
     }
