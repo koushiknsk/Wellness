@@ -24,9 +24,15 @@ export class LoginPage implements OnInit {
     const {username, password} = this
     try{
       const res  = await this.afAuth.auth.signInWithEmailAndPassword(username,password)      
-      if(res != null){
-        //this.router.navigate(['/member-enrollment',res.user.uid]);
-        this.router.navigate(['/home/home',res.user.uid]);
+      if(res != null){  
+        this.userService.getCurrentUserData(res.user.uid).subscribe((user)=>{
+          //onsole.log(user.memEnrollment.mobileNo)
+          if(user.memEnrollment != null)
+            this.router.navigate(['/home/home',res.user.uid]);
+          else
+            this.router.navigate(['/member-enrollment',res.user.uid]);
+        })
+        //console.log(this.userService.getUser(res.user.uid))
       }
     }catch(e){
       console.dir(e);

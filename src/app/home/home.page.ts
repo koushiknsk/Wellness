@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
 
   ionViewWillEnter() {
     this.currUserId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.currUserId)
+    //onsole.log(this.currUserId)
     //need to check if there is any id on the current page
   }
 

@@ -19,6 +19,7 @@
                 <p text-wrap style="size: 3px;font-weight: 500">How many cigarettes do you smoke in a day ?</p>
               </ion-label>
               <ion-select [(ngModel)]="lifeStyleDetails.cigarettes" interface="popover">
+                <ion-select-option value="0">0</ion-select-option>
                 <ion-select-option value="1">1</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
                 <ion-select-option value="3 or more">3 or more</ion-select-option>
@@ -31,6 +32,7 @@
                   <p text-wrap style="size: 3px;font-weight: 500">How many alcoholic drinks you consume per week?</p>
               </ion-label>
               <ion-select [(ngModel)]="lifeStyleDetails.alcohol" interface="popover">
+                <ion-select-option value="0">0</ion-select-option>
                   <ion-select-option value="1">1</ion-select-option>
                   <ion-select-option value="2">2</ion-select-option>
                   <ion-select-option value="3 or more">3 or more</ion-select-option>

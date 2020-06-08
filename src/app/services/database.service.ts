@@ -256,6 +256,14 @@ export class DatabaseService {
     this.alert(msg)
   }
 
+  getUser(id: string): Observable<Users> {
+    return this.afsAllUsersCollection.doc<Users>(id).valueChanges().pipe(
+      take(1),
+      map(user => {        
+        return user
+      })
+    );
+  }
  
   // addCompObj(co : Users): Promise<DocumentReference> {    
   //   return this.cmpObjCollection.add(co);
