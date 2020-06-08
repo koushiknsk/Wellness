@@ -1,4 +1,5 @@
 <ion-content>
+  <!-- Top Part -->
   <ion-grid style="margin-bottom: 2px">
     <ion-row>
       <ion-img style="margin: auto auto;
@@ -10,16 +11,11 @@
       <ion-img src="assets/images/setuphealthprofilebackground.png"></ion-img>
     </ion-row>
 
-
-
     <ion-row style="padding-bottom: 0%">
       <ion-col style="padding-bottom: 0%">
         <ion-img style="width: 90%;padding-left: 7%;" src="assets/images/setHealthValue.png"></ion-img>
       </ion-col>
     </ion-row>
-
-
-
 
     <ion-row>
       <ion-col style="padding-bottom: 0%;padding-top: 0%;">
@@ -79,8 +75,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
+  <!-- Slides -->
   <ion-card style="box-shadow: none;padding-bottom: 0%;padding-top: 0%;margin-bottom: 2px;margin-top: 2px">
   <ion-slides class="profileImages" pager="true" [options]="slideOpts">
       <ion-slide>
@@ -100,10 +95,10 @@
       </ion-slide>
     </ion-slides>
   </ion-card>
-
+  <!-- Bottom Part-->
   <ion-grid style="padding-bottom: 0%;padding-top: 0%">
+    <!-- Blood Group -->
     <ion-row style="padding-bottom: 0%;padding-top: 0%; height: 50px">
-
       <ion-col style="width:40%" align-items-center>
         <ion-card style="padding: auto auto auto auto; margin-right:0px; box-shadow: none">
           <ion-item lines=none>
@@ -115,14 +110,13 @@
           </ion-item>
         </ion-card>
       </ion-col>
-
       <ion-col align-items-center style="width:60%">
         <ion-card style="margin:20px">
           <ion-input [(ngModel)]="personalDetails.bloodGroup" style="text-align: center"></ion-input>
         </ion-card>
       </ion-col>
     </ion-row>
-
+    <!-- Blood Pressure -->
     <ion-row align-items-center style="height: 180px">
       <ion-col style="width: 40%">
         <ion-card style="box-shadow: none; margin-top: 0%;margin-bottom: 0%; width: 100%">
@@ -155,6 +149,7 @@
 
       </ion-col>
     </ion-row>
+    <!-- Blood Sugar -->
     <ion-row>
       <ion-col>
         <ion-card style="box-shadow: none;margin-top: 3%;margin-bottom: 0%;">
@@ -178,6 +173,7 @@
         </ion-card>
       </ion-col>
     </ion-row>
+    <!-- Navigation Buttons -->
     <ion-row style="position: absolute; bottom:0; width:100%">
       <ion-col></ion-col>
       <ion-col>
@@ -195,7 +191,6 @@
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
-
   </ion-grid>
 
 </ion-content>

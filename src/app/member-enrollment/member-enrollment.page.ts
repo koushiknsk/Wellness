@@ -28,9 +28,9 @@ export class MemberEnrollmentPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    console.log("ion")
+    //console.log("ion")
     this.currUserId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.currUserId)
+    //console.log(this.currUserId)
     //need to check if there is any id on the current page
     if(this.currUserId !=null){
     this.userService.getCurrentUserData(this.currUserId).subscribe(currUserData  =>{
@@ -44,7 +44,7 @@ export class MemberEnrollmentPage implements OnInit {
     try{
       //We can check if this.memEnroll  is null just to verify if we have data or not
       // if we have data then we will proceed to next page w/o any updates else we will update data
-      console.log(this.currUserId)
+      //console.log(this.currUserId)
       this.userService.addMemEnrollData(this.currUserId,this.memEnroll)
       this.router.navigate(['/enrollmentp1',this.currUserId]);
       //this.router.navigate(['/home/home',this.currUserId]);
